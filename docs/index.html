@@ -1,0 +1,2611 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <title>@sutton-signwriting/font-ttf 1.0.0 | Documentation</title>
+  <meta name='description' content='a javascript package for the browser that generates SVG and PNG images for individual symbols and complete signs'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>@sutton-signwriting/font-ttf</h3>
+          <div class='mb1'><code>1.0.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#truetype-fonts'
+                  class="h5 bold black caps">
+                  TrueType Fonts
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#font'
+                  class="">
+                  font
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fontcssappend'
+                  class="">
+                  font.cssAppend
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fontcssloaded'
+                  class="">
+                  font.cssLoaded
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fontcssloadedline'
+                  class="">
+                  font.cssLoadedLine
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fontcssloadedfill'
+                  class="">
+                  font.cssLoadedFill
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fontsymbolsize'
+                  class="">
+                  font.symbolSize
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fontsymbolline'
+                  class="">
+                  font.symbolLine
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fontsymbolfill'
+                  class="">
+                  font.symbolFill
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fontsymboltext'
+                  class="">
+                  font.symbolText
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fsw'
+                  class="">
+                  fsw
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsymbolsize'
+                  class="">
+                  fsw.symbolSize
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsymbolline'
+                  class="">
+                  fsw.symbolLine
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsymbolfill'
+                  class="">
+                  fsw.symbolFill
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsymboltext'
+                  class="">
+                  fsw.symbolText
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsymbolsvg'
+                  class="">
+                  fsw.symbolSvg
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsymbolpng'
+                  class="">
+                  fsw.symbolPng
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsymbolnormalize'
+                  class="">
+                  fsw.symbolNormalize
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsignsvg'
+                  class="">
+                  fsw.signSvg
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsignpng'
+                  class="">
+                  fsw.signPng
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fswsignnormalize'
+                  class="">
+                  fsw.signNormalize
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swu'
+                  class="">
+                  swu
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusymbolsize'
+                  class="">
+                  swu.symbolSize
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusymbolline'
+                  class="">
+                  swu.symbolLine
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusymbolfill'
+                  class="">
+                  swu.symbolFill
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusymboltext'
+                  class="">
+                  swu.symbolText
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusymbolsvg'
+                  class="">
+                  swu.symbolSvg
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusymbolpng'
+                  class="">
+                  swu.symbolPng
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusymbolnormalize'
+                  class="">
+                  swu.symbolNormalize
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusignsvg'
+                  class="">
+                  swu.signSvg
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusignpng'
+                  class="">
+                  swu.signPng
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#swusignnormalize'
+                  class="">
+                  swu.signNormalize
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='truetype-fonts' class='mt0'>
+    TrueType Fonts
+  </h2>
+
+  
+    <h1>@sutton-signwriting/font-ttf</h1>
+<p><a href="https://gitter.im/sutton-signwriting/community?utm_source=badge&#x26;utm_medium=badge&#x26;utm_campaign=pr-badge&#x26;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a>
+<a href="https://www.npmjs.com/package/@sutton-signwriting/font-ttf"><img src="https://img.shields.io/npm/v/@sutton-signwriting/font-ttf" alt="version"></a>
+<a href="https://npm-stat.com/charts.html?package=@sutton-signwriting/font-ttf&#x26;from=2019-12-09"><img src="https://img.shields.io/npm/dm/@sutton-signwriting/font-ttf" alt="npm downloads"></a></p>
+<p><img src="./signwriting.png" alt="SignWriting"></p>
+<p>@sutton-signwriting/font-ttf is a javascript package for the browser that generates SVG and PNG images for individual symbols and complete signs using TrueType Fonts.  The package covers the entire set of the International SignWritnig Alphabet 2010 (ISWA 2010).</p>
+<p>This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in Unicode (SWU) character sets, along with the style string.  See <a href="https://tools.ietf.org/id/draft-slevinski-formal-signwriting-07.html">draft-slevinski-formal-signwriting</a> for detailed specification.</p>
+<h2>Useful links</h2>
+<ul>
+<li>GitHub Repo: <a href="https://github.com/sutton-signwriting/font-ttf">https://github.com/sutton-signwriting/font-ttf</a></li>
+<li>Documentation: <a href="https://sutton-signwriting.github.io/font-ttf/">https://sutton-signwriting.github.io/font-ttf/</a></li>
+<li>Issue Tracker: <a href="https://github.com/sutton-signwriting/font-ttf/issues">https://github.com/sutton-signwriting/font-ttf/issues</a></li>
+<li>Online Discussion: <a href="https://gitter.im/sutton-signwriting/community">https://gitter.im/sutton-signwriting/community</a></li>
+</ul>
+<h2>Installation</h2>
+<h2>Install TrueType Font</h2>
+<p>The TrueType Fonts can be installed on Windows, Mac, and Linux.  For iOS, <a href="https://github.com/Slevinski/signwriting_2010_fonts">two mobile configurations</a> are available. Installation is not possible on Android.</p>
+<h3>Install with NPM</h3>
+<pre><code>    npm install @sutton-signwriting/font-ttf
+</code></pre>
+<h3>Install with GIT</h3>
+<pre><code>    # download package
+    git clone https://github.com/sutton-signwriting/font-ttf.git
+
+    # install dependancies
+    cd font-ttf
+    npm install
+
+    # create project documentation
+    npm run docs
+
+    # create project files
+    npm run build
+</code></pre>
+<h2>Usage</h2>
+<h3>Using as a module</h3>
+<pre><code>    // import entire library
+    import ttf from '@sutton-signwriting/font-ttf'
+
+    // import individual module
+    import font '@sutton-signwriting/font-ttf/font/font.min.mjs'
+</code></pre>
+<h3>Using in the Browser</h3>
+<h4>Local files</h4>
+<pre><code>    // import entire library
+    // available as ssw.ttf
+    &#x3C;script src="index.js">&#x3C;/script>
+
+    // import individual module
+    // available as ssw.ttf.font
+    &#x3C;script src="font/font.js">&#x3C;/script>
+</code></pre>
+<h4>Unpkg</h4>
+<pre><code>    // import entire library
+    // available as ssw.ttf
+    &#x3C;script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.0.0">&#x3C;/script>
+
+    // import individual module
+    // available as ssw.ttf.font
+    &#x3C;script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.0.0/font/font.min.js">&#x3C;/script>
+</code></pre>
+<h2>Configure font for VS Code</h2>
+<p>File >> Preferences >> Settings</p>
+<p>Search for "font family".  Append SuttonSignWritingOneD to the list of fonts.  Restart VS Code.</p>
+<h2>License</h2>
+<p>MIT</p>
+<h2>SignWriting General Interest</h2>
+<ul>
+<li>SignWriting Website: <a href="https://signwriting.org/">https://signwriting.org/</a></li>
+<li>Wikipedia page: <a href="https://en.wikipedia.org/wiki/SignWriting">https://en.wikipedia.org/wiki/SignWriting</a></li>
+<li>Email Discussion: <a href="https://www.signwriting.org/forums/swlist/">https://www.signwriting.org/forums/swlist/</a></li>
+<li>Facebook Group: <a href="https://www.facebook.com/groups/SuttonSignWriting/">https://www.facebook.com/groups/SuttonSignWriting/</a></li>
+</ul>
+
+  
+</section></div>
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='font'>
+      font
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The font module contains functions for handing the TrueType fonts.</p>
+
+    <div class='pre p1 fill-light mt0'>font</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fontcssappend'>
+      font.cssAppend
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that appends font-face CSS for the Sutton SignWriting fonts for system installed fonts, relative directory fonts, or content delivery network</p>
+
+    <div class='pre p1 fill-light mt0'>font.cssAppend(dir: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>dir</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an optional relative directory for font location
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>font.cssAppend(<span class="hljs-string">'./font/'</span>)</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fontcssloaded'>
+      font.cssLoaded
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that executes a callback function once the Sutton SignWriiting Line and Fill fonts are ready to use</p>
+
+    <div class='pre p1 fill-light mt0'>font.cssLoaded(callback: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a callback function to execute when fonts are ready
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> callback = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Sutton SignWriting Line and Fill fonts are ready to use"</span>)
+}
+
+font.cssLoaded( callback )</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fontcssloadedline'>
+      font.cssLoadedLine
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that executes a callback function once the Sutton SignWriiting Line font is ready to use</p>
+
+    <div class='pre p1 fill-light mt0'>font.cssLoadedLine(callback: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a callback function to execute when line font is ready
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> callback = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Sutton SignWriting Line font is ready to use"</span>)
+}
+
+font.cssLoadedLine( callback )</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fontcssloadedfill'>
+      font.cssLoadedFill
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that executes a callback function once the Sutton SignWriiting Fill font is ready to use</p>
+
+    <div class='pre p1 fill-light mt0'>font.cssLoadedFill(callback: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a callback function to execute when fill font is ready
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> callback = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Sutton SignWriting Fill font is ready to use"</span>)
+}
+
+font.cssLoadedFill( callback )</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fontsymbolsize'>
+      font.symbolSize
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns the size of a symbol using an id</p>
+
+    <div class='pre p1 fill-light mt0'>font.symbolSize(id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    a 16-bit number of a symbol
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>font.symbolSize(<span class="hljs-number">1</span>)
+
+<span class="hljs-keyword">return</span> [<span class="hljs-number">15</span>,<span class="hljs-number">30</span>]</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fontsymbolline'>
+      font.symbolLine
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns a plane 15 character for a symbol line using an id</p>
+
+    <div class='pre p1 fill-light mt0'>font.symbolLine(id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    a 16-bit number of a symbol
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>font.symbolLine(<span class="hljs-number">1</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'󰀁'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fontsymbolfill'>
+      font.symbolFill
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns a plane 16 character for a symbol fill using an id</p>
+
+    <div class='pre p1 fill-light mt0'>font.symbolFill(id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    a 16-bit number of a symbol
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>font.symbolFill(<span class="hljs-number">1</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'􀀁'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fontsymboltext'>
+      font.symbolText
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates two text elements for a symbol using an id</p>
+
+    <div class='pre p1 fill-light mt0'>font.symbolText(id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    a 16-bit number of a symbol
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>font.symbolText(<span class="hljs-number">1</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">`    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􀀁&lt;/text&gt;
+    &lt;text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󰀁&lt;/text&gt;`</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fsw'>
+      fsw
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The fsw module contains functions for handling Formal SignWriitng in ASCII (FSW) characters.
+<a href="https://tools.ietf.org/id/draft-slevinski-formal-signwriting-07.html#rfc.section.2.2.1">FSW characters definition</a></p>
+
+    <div class='pre p1 fill-light mt0'>fsw</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsymbolsize'>
+      fsw.symbolSize
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns the size of a symbol using an FSW symbol key</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.symbolSize(fsw: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fsw</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW symbol key
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.symbolSize(<span class="hljs-string">"S10000"</span>)
+
+<span class="hljs-keyword">return</span> [<span class="hljs-number">15</span>,<span class="hljs-number">30</span>]</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsymbolline'>
+      fsw.symbolLine
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns a plane 15 character for a symbol line using an FSW symbol key</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.symbolLine(fsw: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fsw</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW symbol key
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.symbolLine(<span class="hljs-string">'S10000'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'󰀁'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsymbolfill'>
+      fsw.symbolFill
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns a plane 16 character for a symbol fill using an FSW symbol key</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.symbolFill(fsw: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fsw</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW symbol key
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>font.symbolFill(<span class="hljs-string">'S10000'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'􀀁'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsymboltext'>
+      fsw.symbolText
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates two text elements for a symbol using an FSW symbol key</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.symbolText(fsw: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fsw</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW symbol key
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.symbolText(<span class="hljs-string">'S10000'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">`    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􀀁&lt;/text&gt;
+    &lt;text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󰀁&lt;/text&gt;`</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsymbolsvg'>
+      fsw.symbolSvg
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates an SVG image from an FSW symbol key with an optional style string</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.symbolSvg(fswSym: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fswSym</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW symbol key with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.symbolSvg(<span class="hljs-string">'S10000'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">`&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="30" viewBox="500 500 15 30"&gt;
+  &lt;text font-size="0"&gt;S10000&lt;/text&gt;
+  &lt;g transform="translate(500,500)"&gt;
+    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􀀁&lt;/text&gt;
+    &lt;text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󰀁&lt;/text&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;`</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsymbolpng'>
+      fsw.symbolPng
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates a binary PNG image from an FSW symbol key with an optional stle string</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.symbolPng(fswSym: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fswSym</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW symbol key with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.symbolPng(<span class="hljs-string">'S10000'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'data:image/png;base64,iVBORw...'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsymbolnormalize'>
+      fsw.symbolNormalize
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that normalizes a symbol with a minimum coordinate for a center of 500,500</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.symbolNormalize(fswSym: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fswSym</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW symbol key with optional coordinate and style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.symbolNormalize(<span class="hljs-string">'S10000-CP10G_green_Z2'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'S10000493x485-CP10G_green_Z2'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsignsvg'>
+      fsw.signSvg
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates an SVG image from an FSW sign with an optional style string</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.signSvg(fswSign: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fswSign</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW sign with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.signSvg(<span class="hljs-string">'M525x535S2e748483x510S10011501x466S2e704510x500S10019476x475'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">`&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="49" height="69" viewBox="476 466 49 69"&gt;
+  &lt;text font-size="0"&gt;M525x535S2e748483x510S10011501x466S2e704510x500S10019476x475&lt;/text&gt;
+  &lt;g transform="translate(483,510)"&gt;
+    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􋛩&lt;/text&gt;
+    &lt;text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󻛩&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(501,466)"&gt;
+    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􀀒&lt;/text&gt;
+    &lt;text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󰀒&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(510,500)"&gt;
+    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􋚥&lt;/text&gt;
+    &lt;text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󻚥&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(476,475)"&gt;
+    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􀀚&lt;/text&gt;
+    &lt;text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󰀚&lt;/text&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;`</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsignpng'>
+      fsw.signPng
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates a binary PNG image from an FSW sign with an optional style string</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.signPng(fswSign: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fswSign</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW sign with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.signPng(<span class="hljs-string">'M525x535S2e748483x510S10011501x466S20544510x500S10019476x475'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'data:image/png;base64,iVBORw...'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fswsignnormalize'>
+      fsw.signNormalize
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that normalizes an FSW sign for a center of 500,500</p>
+
+    <div class='pre p1 fill-light mt0'>fsw.signNormalize(fswSign: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fswSign</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an FSW sign with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fsw.signNormalize(<span class="hljs-string">'M525x535S2e748483x510S10011501x466S2e704510x500S10019476x475'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'M525x535S2e748483x510S10011501x466S2e704510x500S10019476x475'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swu'>
+      swu
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The swu module contains functions for handling Formal SignWriitng in ASCII (SWU) characters.
+<a href="https://tools.ietf.org/id/draft-slevinski-formal-signwriting-07.html#rfc.section.2.2.1">SWU characters definition</a></p>
+
+    <div class='pre p1 fill-light mt0'>swu</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusymbolsize'>
+      swu.symbolSize
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns the size of a symbol using an SWU symbol character</p>
+
+    <div class='pre p1 fill-light mt0'>swu.symbolSize(swu: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swu</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU symbol character
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.symbolSize(<span class="hljs-string">"񀀁"</span>)
+
+<span class="hljs-keyword">return</span> [<span class="hljs-number">15</span>,<span class="hljs-number">30</span>]</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusymbolline'>
+      swu.symbolLine
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns a plane 15 character for a symbol line using an SWU symbol character</p>
+
+    <div class='pre p1 fill-light mt0'>swu.symbolLine(swu: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swu</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU symbol character
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.symbolLine(<span class="hljs-string">'񀀁'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'󰀁'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusymbolfill'>
+      swu.symbolFill
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that returns a plane 165 character for a symbol fill using an SWU symbol character</p>
+
+    <div class='pre p1 fill-light mt0'>swu.symbolFill(swu: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swu</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU symbol character
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.symbolFill(<span class="hljs-string">'񀀁'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'􀀁'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusymboltext'>
+      swu.symbolText
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates two text elements for a symbol using an SWU symbol character</p>
+
+    <div class='pre p1 fill-light mt0'>swu.symbolText(swu: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swu</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU symbol character
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.symbolText(<span class="hljs-string">'񀀁'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">`    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􀀁&lt;/text&gt;
+    &lt;text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󰀁&lt;/text&gt;`</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusymbolsvg'>
+      swu.symbolSvg
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates an SVG image from an SWU symbol character with an optional style string</p>
+
+    <div class='pre p1 fill-light mt0'>swu.symbolSvg(swuSym: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swuSym</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU symbol character with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.symbolSvg(<span class="hljs-string">'񀀁-CP10G_green_Z2'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">`&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="70" height="100" viewBox="490 490 35 50"&gt;
+  &lt;text font-size="0"&gt;񀀁-CP10G_green_Z2&lt;/text&gt;
+  &lt;rect x="490" y="490" width="35" height="50" style="fill:green;" /&gt;
+  &lt;g transform="translate(500,500)"&gt;
+    &lt;text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;"&gt;􀀁&lt;/text&gt;
+    &lt;text class="sym-line" fill="#0000CC" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;"&gt;󰀁&lt;/text&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;`</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusymbolpng'>
+      swu.symbolPng
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates a binary PNG image from an SWU symbol character with an optional stle string</p>
+
+    <div class='pre p1 fill-light mt0'>swu.symbolPng(swuSym: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swuSym</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU symbol character with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.symbolPng(<span class="hljs-string">'񀀁-CP10G_green_Z2'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'data:image/png;base64,iVBORw...'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusymbolnormalize'>
+      swu.symbolNormalize
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that normalizes a symbol with a minimum coordinate for a center of 500,500</p>
+
+    <div class='pre p1 fill-light mt0'>swu.symbolNormalize(swuSym: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swuSym</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU symbol character with optional coordinate and style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.symbolNormalize(<span class="hljs-string">'񀀁'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'񀀁𝣿𝣷'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusignsvg'>
+      swu.signSvg
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates an SVG image from an SWU sign with an optional style string</p>
+
+    <div class='pre p1 fill-light mt0'>swu.signSvg(swuSign: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swuSign</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU sign with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.signSvg(<span class="hljs-string">'𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭-P10G_green_D_yellow,ff0ff0_Z2'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">`&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="138" height="178" viewBox="466 456 69 89"&gt;
+  &lt;text font-size="0"&gt;𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭-P10G_green_D_yellow,ff0ff0_Z2&lt;/text&gt;
+  &lt;rect x="466" y="456" width="69" height="89" style="fill:green;" /&gt;
+  &lt;g transform="translate(483,510)"&gt;
+    &lt;text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;"&gt;􋛩&lt;/text&gt;
+    &lt;text class="sym-line" fill="yellow" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;"&gt;󻛩&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(501,466)"&gt;
+    &lt;text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;"&gt;􀀒&lt;/text&gt;
+    &lt;text class="sym-line" fill="yellow" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;"&gt;󰀒&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(510,500)"&gt;
+    &lt;text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;"&gt;􋚥&lt;/text&gt;
+    &lt;text class="sym-line" fill="yellow" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;"&gt;󻚥&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(476,475)"&gt;
+    &lt;text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;"&gt;􀀚&lt;/text&gt;
+    &lt;text class="sym-line" fill="yellow" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;"&gt;󰀚&lt;/text&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;`</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusignpng'>
+      swu.signPng
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that creates a binary PNG image from an SWU sign with an optional style string</p>
+
+    <div class='pre p1 fill-light mt0'>swu.signPng(swuSign: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swuSign</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU sign with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.signPng(<span class="hljs-string">'𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'data:image/png;base64,iVBORw...'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='swusignnormalize'>
+      swu.signNormalize
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Function that normalizes an SWU sign for a center of 500,500</p>
+
+    <div class='pre p1 fill-light mt0'>swu.signNormalize(swuSign: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>swuSign</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    an SWU sign with optional style string
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>swu.signNormalize(<span class="hljs-string">'𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭'</span>)
+
+<span class="hljs-keyword">return</span> <span class="hljs-string">'𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+toc:
+  - name: TrueType Fonts
+    file: README.md
+  - font
+  - font.cssAppend
+  - font.cssLoaded
+  - font.cssLoadedLine
+  - font.cssLoadedFill
+  - font.symbolSize
+  - font.symbolLine
+  - font.symbolFill
+  - font.symbolText
+  - fsw
+  - fsw.symbolSize
+  - fsw.symbolLine
+  - fsw.symbolFill
+  - fsw.symbolText
+  - fsw.symbolSvg
+  - fsw.symbolPng
+  - fsw.symbolNormalize
+  - fsw.signSvg
+  - fsw.signPng
+  - fsw.signNormalize
+  - swu
+  - swu.symbolSize
+  - swu.symbolLine
+  - swu.symbolFill
+  - swu.symbolText
+  - swu.symbolSvg
+  - swu.symbolPng
+  - swu.symbolNormalize
+  - swu.signSvg
+  - swu.signPng
+  - swu.signNormalize

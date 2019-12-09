@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sutton SignWriting Font TTF Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="testing suite for the Sutton SignWriting Font TTF Library">
+    <meta name="author" content="Steve Slevinski">
+    <meta name="robots" content="noindex,nocache,nofollow,noarchive,noimageindex,nosnippet"/>
+    <script src="../index.js"></script>
+    <link rel="stylesheet" href="./mocha.css" />
+
+    <style>
+      body {
+        padding: 2%;
+      }
+      #mocha-stats {
+        position: relative;
+        float: left;
+        width: 350px;
+        top: -30px;
+      }
+      h2 {
+        font-family: "SuttonSignWritingOneD"
+      }
+      #mocha-report {
+        clear: both;
+      }
+      li.progress {
+        height: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Testing Sutton SignWriting Font TTF</h1>
+    <div id="mocha"></div>
+    <div id="messages"></div>
+    <div id="fixtures"></div>
+    <script src="./chai.js"></script>
+    <script src="./mocha.js"></script>
+    <script>mocha.setup('tdd')</script>
+    <script src="../index.js"></script>
+    <script src="test.js"></script>
+    <div id="svg1"></div>
+    <img id="png1"></img>
+    <div id="svg2"></div>
+    <img id="png2"></img>
+    <div id="svg3"></div>
+    <script>
+      function start() {
+        mocha.checkLeaks();
+        mocha.run();
+        document.getElementById('svg1').innerHTML = ssw.ttf.swu.signSvg("𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭-P10G_green_D_yellow,ff0ff0_Z2") 
+        document.getElementById('png1').src = ssw.ttf.swu.signPng("𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭-P10G_green_D_yellow,ff0ff0_Z2") 
+        document.getElementById('svg2').innerHTML = ssw.ttf.fsw.signSvg("AS10011S10019S2ea04S2ea48S1eb20S15a0aS29b0bM522x573S10019477x437S10011501x428S2ea04506x464S2ea48484x472S29b0b486x538S15a0a487x510S1eb20496x526-P10G_lightblue_Z2-D01_red_D02_blue_D06_red_D07_blue_Z05,2") 
+        document.getElementById('png2').src = ssw.ttf.swu.signPng("𝠀񀀒񀀚񋟅񋠉񅡁񂇋񉨬𝠃𝤵𝤩񀀚𝣘𝣬񀀒𝣰𝣣񋟅𝣵𝤇񋠉𝣟𝤏񉨬𝤕𝤆񂇋𝤔𝣨񅡁𝤝𝣸-P10G_lightblue_Z2-D01_red_D02_blue_D06_red_D07_blue_") 
+        document.getElementById('svg3').innerHTML = ssw.ttf.fsw.symbolSvg("S10000")
+      }
+      ssw.ttf.font.cssAppend('../font/')
+      ssw.ttf.font.cssLoaded(start)
+    </script>
+  </body>
+</html>
