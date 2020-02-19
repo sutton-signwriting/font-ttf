@@ -7,31 +7,35 @@
  * font.cssAppend('./font/')
  */
 const cssAppend = function(dir='') {
-  const style = document.createElement('style');
-  style.appendChild(document.createTextNode(`
+  const id = "SgnwFontCss";
+  if (!document.getElementById(id)){
+    const style = document.createElement('style');
+    style.setAttribute("id","SgnwFontCss")
+    style.appendChild(document.createTextNode(`
   @font-face {
     font-family: "SuttonSignWritingLine";
     src: 
       local('SuttonSignWritingLine'),
       ${dir?`url('${dir}SuttonSignWritingLine.ttf') format('truetype'),`:""}
-      url('https://cdn.rawgit.com/Slevinski/SuttonSignWriting/master/assets/SuttonSignWritingLine.ttf') format('truetype');
+      url('https://unpkg.com/@sutton-signwriting/font-ttf@1.0.0/font/SuttonSignWritingLine.ttf') format('truetype');
   }
   @font-face {
     font-family: "SuttonSignWritingFill";
     src: 
       local('SuttonSignWritingFill'),
       ${dir?`url('${dir}SuttonSignWritingFill.ttf') format('truetype'),`:""}
-      url('https://cdn.rawgit.com/Slevinski/SuttonSignWriting/master/assets/SuttonSignWritingFill.ttf') format('truetype');
+      url('https://unpkg.com/@sutton-signwriting/font-ttf@1.0.0/font/SuttonSignWritingFill.ttf') format('truetype');
   }
   @font-face {
     font-family: "SuttonSignWritingOneD";
     src: 
       local('SuttonSignWritingOneD'),
       ${dir?`url('${dir}SuttonSignWritingOneD.ttf') format('truetype'),`:""}
-      url('https://cdn.rawgit.com/Slevinski/SuttonSignWriting/master/assets/SuttonSignWritingOneD.ttf') format('truetype');
+      url('https://unpkg.com/@sutton-signwriting/font-ttf@1.0.0/font/SuttonSignWritingOneD.ttf') format('truetype');
   }
-  `));
-  document.head.appendChild(style);
+    `));
+    document.head.appendChild(style);
+  }
 }
 
 export { cssAppend }

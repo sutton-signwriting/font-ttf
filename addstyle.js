@@ -10,7 +10,7 @@ const appendStyle = `
   src: 
     local('SuttonSignWritingOneD'),
     url('./SuttonSignWritingOneD.ttf') format('truetype'),
-    url('https://cdn.rawgit.com/Slevinski/SuttonSignWriting/master/assets/SuttonSignWritingOneD.ttf') format('truetype');
+    url('https://unpkg.com/@sutton-signwriting/font-ttf@1.0.0/font/SuttonSignWritingOneD.ttf') format('truetype');
 }
 
 .pre,

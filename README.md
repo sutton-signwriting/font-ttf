@@ -9,6 +9,9 @@
 
 This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in Unicode (SWU) character sets, along with the style string.  See [draft-slevinski-formal-signwriting](https://tools.ietf.org/id/draft-slevinski-formal-signwriting-07.html) for detailed specification.
 
+> Author: https://SteveSlevinski.me  
+> Support: https://www.patreon.com/signwriting
+
 ## Useful links
 
 - GitHub Repo: https://github.com/sutton-signwriting/font-ttf

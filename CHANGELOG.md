@@ -6,11 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2020-02-19
+### Changed
+- Updated font CDN to use Unpkg
+
 ## [1.0.0] - 2019-12-09
 ### Added
 - core modules of font, fsw and swu for individual symbols and complete signs
 - documentation for core modules
 
 
-[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.1.0
 [1.0.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.0.0
