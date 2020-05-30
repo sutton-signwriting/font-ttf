@@ -1,7 +1,7 @@
 {
   "name": "@sutton-signwriting/font-ttf",
   "description": "a javascript package for the browser that generates SVG and PNG images for individual symbols and complete signs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "keywords": [
     "truetype",
     "ttf",

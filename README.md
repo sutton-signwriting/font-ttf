@@ -10,11 +10,13 @@
 This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in Unicode (SWU) character sets, along with the style string.  See [draft-slevinski-formal-signwriting](https://tools.ietf.org/id/draft-slevinski-formal-signwriting-07.html) for detailed specification.
 
 > Author: https://SteveSlevinski.me  
+> Channel: https://www.youtube.com/channel/UCXu4AXlG0rXFtk_5SzumDow  
 > Support: https://www.patreon.com/signwriting
 
 ## Useful links
 
 - GitHub Repo: https://github.com/sutton-signwriting/font-ttf
+- Distribution: https://unpkg.com/browse/@sutton-signwriting/font-ttf/
 - Documentation: https://sutton-signwriting.github.io/font-ttf/
 - Issue Tracker: https://github.com/sutton-signwriting/font-ttf/issues
 - Online Discussion: https://gitter.im/sutton-signwriting/community
@@ -35,7 +37,7 @@ The TrueType Fonts can be installed on Windows, Mac, and Linux.  For iOS, [two m
     # download package
     git clone https://github.com/sutton-signwriting/font-ttf.git
 
-    # install dependancies
+    # install dependencies
     cd font-ttf
     npm install
 
@@ -51,10 +53,10 @@ The TrueType Fonts can be installed on Windows, Mac, and Linux.  For iOS, [two m
 ### Using as a module
 ```
     // import entire library
-    import ttf from '@sutton-signwriting/font-ttf'
+    import * as ttf from '@sutton-signwriting/font-ttf'
 
     // import individual module
-    import font '@sutton-signwriting/font-ttf/font/font.min.mjs'
+    import {font} from '@sutton-signwriting/font-ttf'
 ```
 
 ### Using in the Browser
