@@ -1,5 +1,5 @@
 
-/** The swu module contains functions for handling Formal SignWriitng in ASCII (SWU) characters.
+/** The swu module contains functions for handling SignWriting in Unicode (SWU) characters.
  * [SWU characters definition](https://tools.ietf.org/id/draft-slevinski-formal-signwriting-07.html#rfc.section.2.2.1)
  * @module swu
  */
