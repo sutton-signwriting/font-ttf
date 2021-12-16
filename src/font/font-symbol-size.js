@@ -3,10 +3,7 @@ let sizes = {}
 
 const zoom = 2;
 const bound = 76 * zoom;
-const canvaser = document.createElement("canvas");
-canvaser.width = bound;
-canvaser.height = bound;
-const context = canvaser.getContext("2d");
+let context;
 
 /**
  * Function that returns the size of a symbol using an id
@@ -20,6 +17,12 @@ const context = canvaser.getContext("2d");
 const symbolSize = function(id){
   if (id in sizes) {
     return [...sizes[id]];
+  }
+  if(!context) {
+    const canvaser = document.createElement("canvas");
+    canvaser.width = bound;
+    canvaser.height = bound;
+    context = canvaser.getContext("2d"); 
   }
   context.clearRect(0, 0, bound, bound);
   context.font = (30*zoom) + "px 'SuttonSignWritingLine'";
