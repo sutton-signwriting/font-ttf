@@ -7,7 +7,7 @@
 
 @sutton-signwriting/font-ttf is a javascript package for the browser that generates SVG and PNG images for individual symbols and complete signs using TrueType Fonts.  The package covers the entire set of the International SignWritnig Alphabet 2010 (ISWA 2010).
 
-This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in Unicode (SWU) character sets, along with the style string.  See [draft-slevinski-formal-signwriting](https://tools.ietf.org/id/draft-slevinski-formal-signwriting-07.html) for detailed specification.
+This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in Unicode (SWU) character sets, along with the style string.  See [draft-slevinski-formal-signwriting](https://tools.ietf.org/id/draft-slevinski-formal-signwriting-08.html) for detailed specification.
 
 > Author: https://SteveSlevinski.me  
 > Channel: https://www.youtube.com/channel/UCXu4AXlG0rXFtk_5SzumDow  
@@ -76,11 +76,11 @@ The TrueType Fonts can be installed on Windows, Mac, and Linux.  For iOS, [two m
 ```
     // import entire library
     // available as ssw.ttf
-    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.0.0"></script>
+    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.2.1"></script>
 
     // import individual module
     // available as ssw.ttf.font
-    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.0.0/font/font.min.js"></script>
+    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.2.1/font/font.min.js"></script>
 ```
 
 ## Configure font for VS Code
