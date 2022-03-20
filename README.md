@@ -7,7 +7,7 @@
 
 @sutton-signwriting/font-ttf is a javascript package for the browser that generates SVG and PNG images for individual symbols and complete signs using TrueType Fonts.  The package covers the entire set of the International SignWritnig Alphabet 2010 (ISWA 2010).
 
-This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in Unicode (SWU) character sets, along with the style string.  See [draft-slevinski-formal-signwriting](https://tools.ietf.org/id/draft-slevinski-formal-signwriting-08.html) for detailed specification.
+This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in Unicode (SWU) character sets, along with the style string.  See [draft-slevinski-formal-signwriting](https://tools.ietf.org/id/draft-slevinski-formal-signwriting-09.html) for detailed specification.
 
 > Author: https://SteveSlevinski.me  
 > Channel: https://www.youtube.com/channel/UCXu4AXlG0rXFtk_5SzumDow  
@@ -15,9 +15,9 @@ This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in 
 
 ## Useful links
 
-- GitHub Repo: https://github.com/sutton-signwriting/font-ttf
+- Source: https://github.com/sutton-signwriting/font-ttf
 - Distribution: https://unpkg.com/browse/@sutton-signwriting/font-ttf/
-- Documentation: https://sutton-signwriting.github.io/font-ttf/
+- Documentation: https://www.sutton-signwriting.io/font-ttf/
 - Issue Tracker: https://github.com/sutton-signwriting/font-ttf/issues
 - Online Discussion: https://gitter.im/sutton-signwriting/community
 
@@ -76,11 +76,11 @@ The TrueType Fonts can be installed on Windows, Mac, and Linux.  For iOS, [two m
 ```
     // import entire library
     // available as ssw.ttf
-    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.2.1"></script>
+    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.3.0"></script>
 
     // import individual module
     // available as ssw.ttf.font
-    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.2.1/font/font.min.js"></script>
+    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.3.0/font/font.min.js"></script>
 ```
 
 ## Configure font for VS Code
@@ -94,6 +94,7 @@ MIT
 
 ## SignWriting General Interest
 - SignWriting Website: https://signwriting.org/
+- Sutton SignWriting Resources: https://www.sutton-signwriting.io/
 - Wikipedia page: https://en.wikipedia.org/wiki/SignWriting
 - Email Discussion: https://www.signwriting.org/forums/swlist/
 - Facebook Group: https://www.facebook.com/groups/SuttonSignWriting/

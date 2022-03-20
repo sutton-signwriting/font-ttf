@@ -59,7 +59,7 @@ const symbolCanvas = function(fswSym){
 }
 
 /**
- * Function that creates a binary PNG image from an FSW symbol key with an optional stle string
+ * Function that creates a PNG data url from an FSW symbol key with an optional style string
  * @function fsw.symbolPng
  * @param {string} fswSym - an FSW symbol key with optional style string
  * @example

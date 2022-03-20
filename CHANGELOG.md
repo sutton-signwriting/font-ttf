@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2022-03-20
+### Added
+- SVG Body functions
+- Column SVG images
+- Column PNG images
+
+### Removed
+- Individual symbol resizing and offset inside of signs
+
 ## [1.2.1] - 2022-01-22
 ### Changed
 - Delay DOM setup for server side rendering
@@ -24,7 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - documentation for core modules
 
 
-[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.2.1...HEAD
+[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.3.0
 [1.2.1]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.2.1
 [1.2.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.2.0
 [1.1.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.1.0

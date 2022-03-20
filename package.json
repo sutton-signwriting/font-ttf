@@ -1,7 +1,7 @@
 {
   "name": "@sutton-signwriting/font-ttf",
   "description": "a javascript package for the web components and browser that generates SVG and PNG images for individual symbols and complete signs",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "keywords": [
     "truetype",
     "ttf",
@@ -12,7 +12,7 @@
     "script",
     "browser"
   ],
-  "homepage": "https://sutton-signwriting.github.io/font-ttf/",
+  "homepage": "https://www.sutton-signwriting.io/font-ttf/",
   "repository": {
     "type": "git",
     "url": "https://github.com/sutton-signwriting/font-ttf.git"
@@ -40,24 +40,23 @@
   "scripts": {
     "prebuild": "rimraf index.* font fsw swu; copyfiles --flat src/font/*ttf font",
     "build": "rollup -c",
-    "docs": "documentation build src/index.js --config documentation.yml -f html -o docs",
+    "docs": "npx documentation build src/index.js --config documentation.yml -f html -o docs",
     "postdocs": "node addstyle.js; copyfiles --flat signwriting.png docs",
-    "docs:server": "documentation serve --watch src/index.js --config documentation.yml"
+    "docs:server": "npx documentation serve --watch src/index.js --config documentation.yml"
   },
   "dependencies": {
-    "@sutton-signwriting/core": "^1.1.0"
+    "@sutton-signwriting/core": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "copyfiles": "^2.1.1",
-    "documentation": "^12.1.4",
-    "jest": "^24.9.0",
+    "jest": "^27.5.1",
     "rimraf": "^3.0.0",
-    "rollup": "^1.27.8",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.2"
+    "rollup": "^2.68.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }

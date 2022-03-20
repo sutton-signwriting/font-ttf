@@ -26,21 +26,6 @@ const signCanvas = function (swuSign) {
     let x2 = parsed.max[0];
     let y2 = parsed.max[1];
 
-    if (styling.zoomsym) {
-      styling.zoomsym.forEach(sym => {
-        if (parsed.spatials[sym.index - 1]){
-          parsed.spatials[sym.index - 1].zoom = sym.zoom;
-          if (sym.offset) {
-            parsed.spatials[sym.index - 1].coord[0] += sym.offset[0];
-            parsed.spatials[sym.index - 1].coord[1] += sym.offset[1];
-          }
-          let size = symbolSize(parsed.spatials[sym.index - 1].symbol)
-          x2 = Math.max(x2, (parsed.spatials[sym.index - 1].coord[0] + (size[0] * sym.zoom)));
-          y2 = Math.max(y2, (parsed.spatials[sym.index - 1].coord[1] + (size[1] * sym.zoom)));
-        }
-      })
-    }
-
     if (styling.padding) {
       x1 -= styling.padding;
       y1 -= styling.padding;
@@ -81,12 +66,10 @@ const signCanvas = function (swuSign) {
         symFill = spatial.detail[1];
       }
 
-      let symZoom = spatial.zoom || 1;
-
-      context.font = (30*sizing*symZoom) + "px 'SuttonSignWritingFill'";
+      context.font = (30*sizing) + "px 'SuttonSignWritingFill'";
       context.fillStyle = symFill;
       context.fillText(symbolFill(spatial.symbol),((spatial.coord[0]-x1)*sizing),((spatial.coord[1]-y1)*sizing));
-      context.font = (30*sizing*symZoom) + "px 'SuttonSignWritingLine'";
+      context.font = (30*sizing) + "px 'SuttonSignWritingLine'";
       context.fillStyle = symLine;
       context.fillText(symbolLine(spatial.symbol),((spatial.coord[0]-x1)*sizing),((spatial.coord[1]-y1)*sizing));
 
@@ -96,7 +79,7 @@ const signCanvas = function (swuSign) {
 }
 
 /**
- * Function that creates a binary PNG image from an SWU sign with an optional style string
+ * Function that creates a PNG data url from an SWU sign with an optional style string
  * @function swu.signPng
  * @param {string} swuSign - an SWU sign with optional style string
  * @example

@@ -59,7 +59,7 @@ const symbolCanvas = function(swuSym){
 }
 
 /**
- * Function that creates a binary PNG image from an SWU symbol character with an optional stle string
+ * Function that creates a PNG data url from an SWU symbol character with an optional style string
  * @function swu.symbolPng
  * @param {string} swuSym - an SWU symbol character with optional style string
  * @example

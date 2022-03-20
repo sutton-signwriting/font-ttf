@@ -1,5 +1,5 @@
-import resolve from 'rollup-plugin-node-resolve'
-import babel from 'rollup-plugin-babel'
+import resolve from '@rollup/plugin-node-resolve'
+import babel from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import { version } from './package.json';
 
@@ -50,7 +50,8 @@ const main = (input, name, dirname, filename) => {
     plugins: [
       resolve(),
       babel({
-        exclude: 'node_modules/**'
+        exclude: 'node_modules/**',
+        babelHelpers: 'bundled'
       })
     ]
   }
@@ -63,7 +64,8 @@ const min = (input, name, dirname, filename) => {
     plugins: [
       resolve(),
       babel({
-        exclude: 'node_modules/**'
+        exclude: 'node_modules/**',
+        babelHelpers: 'bundled'
       }),
       terser({
         output: {
