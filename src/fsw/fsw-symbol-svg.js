@@ -69,7 +69,7 @@ ${symSvg}
     background = `\n  <rect x="${x1}" y="${y1}" width="${x2 - x1}" height="${y2 - y1}" style="fill:${styling.background};" />`
   }
 
-  return `<text font-size="0">${fswSym}</text>${background}
+  return `  <text font-size="0">${fswSym}</text>${background}
 ${symSvg}`;
 }
 

@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.1] - 2022-03-30
+### Fixed
+- SVG formatting
+- security dependency
+
 ## [1.3.0] - 2022-03-20
 ### Added
 - SVG Body functions
@@ -33,7 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - documentation for core modules
 
 
-[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.3.1...HEAD
+[1.3.1]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.3.1
 [1.3.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.3.0
 [1.2.1]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.2.1
 [1.2.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.2.0

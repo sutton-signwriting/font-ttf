@@ -58,7 +58,7 @@ const signSvgBody = (fswSign) => {
       background = `\n  <rect x="${x1}" y="${y1}" width="${x2 - x1}" height="${y2 - y1}" style="fill:${styling.background};" />`
     }
 
-    let svg = `<text font-size="0">${fswSign}</text>${background}`
+    let svg = `  <text font-size="0">${fswSign}</text>${background}`
 
     const line = styling.detail && styling.detail[0];
     const fill = styling.detail && styling.detail[1];
@@ -154,7 +154,8 @@ ${svg}
       sizing = ` width="${(x2 - x1) * (styling.zoom ? styling.zoom : 1)}" height="${(y2 - y1) * (styling.zoom ? styling.zoom : 1)}"`;
     }
 
-    let svg = `<svg${classes}${id} version="1.1" xmlns="http://www.w3.org/2000/svg"${sizing} viewBox="${x1} ${y1} ${(x2 - x1)} ${(y2 - y1)}">`
+    let svg = `<svg${classes}${id} version="1.1" xmlns="http://www.w3.org/2000/svg"${sizing} viewBox="${x1} ${y1} ${(x2 - x1)} ${(y2 - y1)}">
+`
 
     svg += signSvgBody(fswSign);
 
