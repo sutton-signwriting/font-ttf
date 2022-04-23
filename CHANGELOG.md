@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.2] - 2022-04-23
+### Added
+- data types in documentation
+
+### Fixed
+- symbol normalization
+- symbol svg size
+- testing
+
 ## [1.3.1] - 2022-03-30
 ### Fixed
 - SVG formatting
@@ -38,7 +47,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - documentation for core modules
 
 
-[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.3.1...HEAD
+[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.3.2...HEAD
+[1.3.2]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.3.2
 [1.3.1]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.3.1
 [1.3.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.3.0
 [1.2.1]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.2.1

@@ -1,7 +1,7 @@
 {
   "name": "@sutton-signwriting/font-ttf",
   "description": "a javascript package for the web components and browser that generates SVG and PNG images for individual symbols and complete signs",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "keywords": [
     "truetype",
     "ttf",
@@ -51,12 +51,11 @@
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
-    "copyfiles": "^2.1.1",
-    "jest": "^27.5.1",
-    "rimraf": "^3.0.0",
-    "rollup": "^2.68.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-node-resolve": "^13.1.3",
+    "copyfiles": "^2.1.1",
+    "rimraf": "^3.0.0",
+    "rollup": "^2.68.0",
     "rollup-plugin-terser": "^7.0.2"
   }
 }

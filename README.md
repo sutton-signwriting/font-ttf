@@ -11,7 +11,8 @@ This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in 
 
 > Author: https://SteveSlevinski.me  
 > Channel: https://www.youtube.com/channel/UCXu4AXlG0rXFtk_5SzumDow  
-> Support: https://www.patreon.com/signwriting
+> Sponsor: https://www.patreon.com/signwriting  
+> Donate: https://paypal.me/signwriting
 
 ## Useful links
 

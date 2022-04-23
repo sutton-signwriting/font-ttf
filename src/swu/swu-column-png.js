@@ -86,7 +86,7 @@ const columnCanvas = function (swuColumn, options) {
 /**
  * Function that creates a PNG data url for a column of SWU
  * @function swu.columnPng
- * @param {array} swuColumn - an array of SWU signs and punctuation with coordinates
+ * @param {ColumnData} swuColumn - an array of SWU signs and punctuation with coordinates
  * @param {ColumnOptions} options - an object of column options
  * @returns {string} column png data url
  * @example

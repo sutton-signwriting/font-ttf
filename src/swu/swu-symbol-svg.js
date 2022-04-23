@@ -32,10 +32,10 @@ import { symbolText } from './swu-symbol-text';
   } else {
     let size = symbolSize(parsed.symbol);
     if (!size) return blank;
-    x1 = parseInt( 500 - (size[0])/2 );
-    y1 = parseInt( 500 - (size[1])/2 );
-    x2 = x1 + size[0];
-    y2 = y1 + size[1];
+    x1 = 500 - parseInt((size[0]+1)/2);
+    y1 = 500 - parseInt((size[1]+1)/2);
+    x2 = 500 + (500-x1);
+    y2 = 500 + (500-y1);
   }
 
   let symSvg = symbolText(parsed.symbol);

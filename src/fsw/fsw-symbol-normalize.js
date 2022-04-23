@@ -18,7 +18,7 @@ const symbolNormalize = (fswSym) => {
   if (parsed.symbol) {
     let size = symbolSize(parsed.symbol);
     if (size) {
-      return `${parsed.symbol}${500 - parseInt(size[0] / 2)}x${500 - parseInt(size[1] / 2)}${parsed.style || ''}`;
+      return `${parsed.symbol}${500 - parseInt((size[0]+1) / 2)}x${500 - parseInt((size[1]+1) / 2)}${parsed.style || ''}`;
     }
   } else {
     return blank;

@@ -86,7 +86,7 @@ const columnCanvas = function (fswColumn, options) {
 /**
  * Function that creates a PNG data url for a column of FSW
  * @function fsw.columnPng
- * @param {array} fswColumn - an array of objects with information about FSW signs and punctuation
+ * @param {ColumnData} fswColumn - an array of objects with information about FSW signs and punctuation
  * @param {ColumnOptions} options - an object of column options
  * @returns {string} column png data url
  * @example

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@sutton-signwriting/font-ttf 1.3.1 | Documentation</title>
+  <title>@sutton-signwriting/font-ttf 1.3.2 | Documentation</title>
   <meta name='description' content='a javascript package for the web components and browser that generates SVG and PNG images for individual symbols and complete signs'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@sutton-signwriting/font-ttf</h3>
-          <div class='mb1'><code>1.3.1</code></div>
+          <div class='mb1'><code>1.3.2</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -469,9 +469,39 @@
               
                 
                 <li><a
+                  href='#styleobject'
+                  class="">
+                  StyleObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#columnoptions'
                   class="">
                   ColumnOptions
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#columndata'
+                  class="">
+                  ColumnData
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#columnsegment'
+                  class="">
+                  ColumnSegment
                   
                 </a>
                 
@@ -504,7 +534,8 @@
 <blockquote>
 <p>Author: <a href="https://SteveSlevinski.me">https://SteveSlevinski.me</a><br>
 Channel: <a href="https://www.youtube.com/channel/UCXu4AXlG0rXFtk_5SzumDow">https://www.youtube.com/channel/UCXu4AXlG0rXFtk_5SzumDow</a><br>
-Support: <a href="https://www.patreon.com/signwriting">https://www.patreon.com/signwriting</a></p>
+Sponsor: <a href="https://www.patreon.com/signwriting">https://www.patreon.com/signwriting</a><br>
+Donate: <a href="https://paypal.me/signwriting">https://paypal.me/signwriting</a></p>
 </blockquote>
 <h2>Useful links</h2>
 <ul>
@@ -2186,7 +2217,7 @@ font.cssLoadedFill( callback )</pre>
 
   <p>Function that creates an SVG image for a column of FSW</p>
 
-    <div class='pre p1 fill-light mt0'>fsw.columnSvg(fswColumn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>, options: <a href="#columnoptions">ColumnOptions</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+    <div class='pre p1 fill-light mt0'>fsw.columnSvg(fswColumn: <a href="#columndata">ColumnData</a>, options: <a href="#columnoptions">ColumnOptions</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -2203,7 +2234,7 @@ font.cssLoadedFill( callback )</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>fswColumn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+            <span class='code bold'>fswColumn</span> <code class='quiet'>(<a href="#columndata">ColumnData</a>)</code>
 	    an array of objects with information about FSW signs and punctuation
 
           </div>
@@ -2487,7 +2518,7 @@ font.cssLoadedFill( callback )</pre>
 
   <p>Function that creates a PNG data url for a column of FSW</p>
 
-    <div class='pre p1 fill-light mt0'>fsw.columnPng(fswColumn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>, options: <a href="#columnoptions">ColumnOptions</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+    <div class='pre p1 fill-light mt0'>fsw.columnPng(fswColumn: <a href="#columndata">ColumnData</a>, options: <a href="#columnoptions">ColumnOptions</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -2504,7 +2535,7 @@ font.cssLoadedFill( callback )</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>fswColumn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+            <span class='code bold'>fswColumn</span> <code class='quiet'>(<a href="#columndata">ColumnData</a>)</code>
 	    an array of objects with information about FSW signs and punctuation
 
           </div>
@@ -3672,7 +3703,7 @@ font.cssLoadedFill( callback )</pre>
 
   <p>Function that creates an SVG image for a column of SWU</p>
 
-    <div class='pre p1 fill-light mt0'>swu.columnSvg(swuColumn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>, options: <a href="#columnoptions">ColumnOptions</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+    <div class='pre p1 fill-light mt0'>swu.columnSvg(swuColumn: <a href="#columndata">ColumnData</a>, options: <a href="#columnoptions">ColumnOptions</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -3689,7 +3720,7 @@ font.cssLoadedFill( callback )</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>swuColumn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+            <span class='code bold'>swuColumn</span> <code class='quiet'>(<a href="#columndata">ColumnData</a>)</code>
 	    an array of objects with information about FSW signs and punctuation
 
           </div>
@@ -3973,7 +4004,7 @@ font.cssLoadedFill( callback )</pre>
 
   <p>Function that creates a PNG data url for a column of SWU</p>
 
-    <div class='pre p1 fill-light mt0'>swu.columnPng(swuColumn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>, options: <a href="#columnoptions">ColumnOptions</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+    <div class='pre p1 fill-light mt0'>swu.columnPng(swuColumn: <a href="#columndata">ColumnData</a>, options: <a href="#columnoptions">ColumnOptions</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -3990,7 +4021,7 @@ font.cssLoadedFill( callback )</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>swuColumn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+            <span class='code bold'>swuColumn</span> <code class='quiet'>(<a href="#columndata">ColumnData</a>)</code>
 	    an array of SWU signs and punctuation with coordinates
 
           </div>
@@ -4188,6 +4219,136 @@ font.cssLoadedFill( callback )</pre>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='styleobject'>
+      StyleObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The elements of a style string</p>
+
+    <div class='pre p1 fill-light mt0'>StyleObject</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>colorize</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+          : boolean to use standardized colors for symbol groups
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>padding</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : integer value for padding around symbol or sign
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>background</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : css name or hex color for background
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>detail</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+          : array for css name or hex color for line and optional fill
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>zoom</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : decimal value for zoom level
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>detailsym</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>>)</code>
+          : custom colors for individual symbols
+
+          
+            <ul>
+              
+                <li><code>detailsym.index</code> <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+                  
+                  <p>symbol index in sign box</p>
+</li>
+              
+                <li><code>detailsym.detail</code> <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>
+                  
+                  <p>array for css name or hex color for line and optional fill</p>
+</li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>classes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : list of class names separated with spaces used for SVG
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : id name used for SVG
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='columnoptions'>
       ColumnOptions
     </h3>
@@ -4269,7 +4430,7 @@ font.cssLoadedFill( callback )</pre>
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>style</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+          <span class='code bold'>style</span> <code class='quiet'>(<a href="#styleobject">StyleObject</a>)</code>
           : an object of style options
 
           
@@ -4298,6 +4459,196 @@ font.cssLoadedFill( callback )</pre>
 </li>
               
             </ul>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='columndata'>
+      ColumnData
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>ColumnData</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#columnsegment">ColumnSegment</a>>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='columnsegment'>
+      ColumnSegment
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>ColumnSegment</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : the x position in the column
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>y</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : the y position in the column
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>minX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : the min x value within the segment
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>minY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : the min y value within the segment
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>width</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : the width of the text segment
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>height</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : the height of the text segment
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>lane</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Left as -1, Middle as 0, Right as 1
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>padding</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : the padding of the text segment affects colored background
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>segment</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : "sign" or "symbol"
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>text</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : the text of the sign or symbol with optional style string
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>zoom</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : the zoom size of the segment
+
           
         </div>
       

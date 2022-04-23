@@ -10,17 +10,15 @@ suite('font', function(){
   })
 })
 
-//png 66 and 400
-
 suite('fsw', function(){
   suite('symbolSvg', function(){
     test('S10000', function(){
-      assert.equal(ssw.ttf.fsw.symbolSvg('S10000-CP10G_green_Z2'),`<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="70" height="100" viewBox="490 490 35 50">
+      assert.equal(ssw.ttf.fsw.symbolSvg('S10000-CP10G_green_Z2'),`<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="70" height="100" viewBox="482 475 35 50">
   <text font-size="0">S10000-CP10G_green_Z2</text>
-  <rect x="490" y="490" width="35" height="50" style="fill:green;" />
-  <g transform="translate(500,500)">
-    <text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;">􀀁</text>
-    <text class="sym-line" fill="#0000CC" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;">󰀁</text>
+  <rect x="482" y="475" width="36" height="50" style="fill:green;" />
+  <g transform="translate(492,485)">
+    <text class="sym-fill" fill="white" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;">􀀁</text>
+    <text class="sym-line" fill="#0000CC" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;">󰀁</text>
   </g>
 </svg>`);
     });
@@ -37,7 +35,7 @@ suite('fsw', function(){
   })
   suite('symbolNormalize', function(){
     test('S10000-CP10G_green_Z2', function(){
-      assert.equal(ssw.ttf.fsw.symbolNormalize('S10000-CP10G_green_Z2'),'S10000493x485-CP10G_green_Z2');
+      assert.equal(ssw.ttf.fsw.symbolNormalize('S10000-CP10G_green_Z2'),'S10000492x485-CP10G_green_Z2');
     });
   })
   suite('signSvg', function(){
@@ -84,12 +82,12 @@ suite('fsw', function(){
 suite('swu', function(){
   suite('symbolSvg', function(){
     test('񀀁', function(){
-      assert.equal(ssw.ttf.swu.symbolSvg('񀀁-CP10G_green_Z2'),`<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="70" height="100" viewBox="490 490 35 50">
+      assert.equal(ssw.ttf.swu.symbolSvg('񀀁-CP10G_green_Z2'),`<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="70" height="100" viewBox="482 475 35 50">
   <text font-size="0">񀀁-CP10G_green_Z2</text>
-  <rect x="490" y="490" width="35" height="50" style="fill:green;" />
-  <g transform="translate(500,500)">
-    <text class="sym-fill" fill="white" style="pointer-events:none;font-family:'SuttonSignWritingFill';font-size:30px;">􀀁</text>
-    <text class="sym-line" fill="#0000CC" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;">󰀁</text>
+  <rect x="482" y="475" width="36" height="50" style="fill:green;" />
+  <g transform="translate(492,485)">
+    <text class="sym-fill" fill="white" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;">􀀁</text>
+    <text class="sym-line" fill="#0000CC" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;">󰀁</text>
   </g>
 </svg>`);
     });
@@ -106,7 +104,7 @@ suite('swu', function(){
   })
   suite('symbolNormalize', function(){
     test('񀀁-CP10G_green_Z2', function(){
-      assert.equal(ssw.ttf.swu.symbolNormalize('񀀁-CP10G_green_Z2'),'񀀁𝣿𝣷-CP10G_green_Z2');
+      assert.equal(ssw.ttf.swu.symbolNormalize('񀀁-CP10G_green_Z2'),'񀀁𝣾𝣷-CP10G_green_Z2');
     });
   })
   suite('signSvg', function(){
