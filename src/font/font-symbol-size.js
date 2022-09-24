@@ -9,6 +9,7 @@ let context;
  * Function that returns the size of a symbol using an id
  * @function font.symbolSize
  * @param {number} id - a 16-bit number of a symbol
+ * @returns {number[]} width and height of symbol
  * @example
  * font.symbolSize(1)
  * 

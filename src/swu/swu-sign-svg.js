@@ -1,12 +1,12 @@
 
-import { parse as parseStyle} from '@sutton-signwriting/core/style/style.mjs'; 
-import { parse, colorize } from '@sutton-signwriting/core/swu/swu.mjs';
+import { swu, style } from '@sutton-signwriting/core';
 import { symbolText } from './swu-symbol-text';
 
 /**
  * Function that creates an SVG image from an SWU sign with an optional style string
  * @function swu.signSvgBody
  * @param {string} swuSign - an SWU sign with optional style string
+ * @returns {string} body of SVG for sign
  * @example
  * swu.signSvgBody('M525x535S2e748483x510S10011501x466S2e704510x500S10019476x475')
  * 
@@ -29,10 +29,10 @@ import { symbolText } from './swu-symbol-text';
  *   </g>`
  */
 const signSvgBody = (swuSign) => {
-  let parsed = parse.sign(swuSign);
+  let parsed = swu.parse.sign(swuSign);
   const blank = '';
   if (parsed.spatials) {
-    let styling = parseStyle(parsed.style);
+    let styling = style.parse(parsed.style);
 
     if (styling.detailsym) {
       styling.detailsym.forEach(sym => {
@@ -70,7 +70,7 @@ const signSvgBody = (swuSign) => {
       if (spatial.detail) {
         symLine = spatial.detail[0];
       } else if (styling.colorize) {
-        symLine = colorize(spatial.symbol);
+        symLine = swu.colorize(spatial.symbol);
       }
       if (symLine) {
         svg = svg.replace(/class="sym-line" fill="black"/, `class="sym-line" fill="${symLine}"`);
@@ -99,6 +99,7 @@ ${svg}
  * Function that creates an SVG image from an SWU sign with an optional style string
  * @function swu.signSvg
  * @param {string} swuSign - an SWU sign with optional style string
+ * @returns {string} SVG for sign
  * @example
  * swu.signSvg('M525x535S2e748483x510S10011501x466S2e704510x500S10019476x475')
  * 
@@ -123,10 +124,10 @@ ${svg}
  * </svg>`
  */
  const signSvg = (swuSign) => {
-  let parsed = parse.sign(swuSign);
+  let parsed = swu.parse.sign(swuSign);
   const blank = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1" height="1"></svg>';
   if (parsed.spatials) {
-    let styling = parseStyle(parsed.style);
+    let styling = style.parse(parsed.style);
 
     let x1 = Math.min(...parsed.spatials.map(spatial => spatial.coord[0]));
     let y1 = Math.min(...parsed.spatials.map(spatial => spatial.coord[1]));

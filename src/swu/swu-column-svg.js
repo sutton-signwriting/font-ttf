@@ -1,6 +1,5 @@
 
-import { parse as parseStyle, compose as composeStyle} from '@sutton-signwriting/core/style/style.mjs'; 
-import { columnDefaults } from '@sutton-signwriting/core/swu/swu.mjs';
+import { swu, style } from '@sutton-signwriting/core'; 
 import { signSvgBody } from './swu-sign-svg';
 import { symbolSvgBody } from './swu-symbol-svg';
 
@@ -101,7 +100,7 @@ const columnSvg = (swuColumn, options) => {
   const blank = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1" height="1"></svg>';
   //if (typeof swuColumn !== 'array') return blank;
   if (typeof options !== 'object') options = {};
-  const values = Object.assign(columnDefaults,options);
+  const values = Object.assign(swu.columnDefaults,options);
 
   let x1 = 0;
   let y1 = 0;
@@ -124,11 +123,11 @@ const columnSvg = (swuColumn, options) => {
       const itemStyle = item.text.substring(dash);
       const newStyle = {
         ...values.style,
-        ...parseStyle(itemStyle)
+        ...style.parse(itemStyle)
       };
-      item.text = item.text.replace(itemStyle,composeStyle(newStyle));
+      item.text = item.text.replace(itemStyle,style.compose(newStyle));
     } else {
-      item.text += composeStyle(values.style);
+      item.text += style.compose(values.style);
     }
     item.zoom = item.zoom * values.style.zoom;
 

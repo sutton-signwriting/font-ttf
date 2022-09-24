@@ -1,5 +1,5 @@
 
-import { columns } from '@sutton-signwriting/core/swu/swu.mjs';
+import { swu } from '@sutton-signwriting/core';
 import { columnSvg } from './swu-column-svg';
 
 /**
@@ -56,7 +56,7 @@ import { columnSvg } from './swu-column-svg';
  */
 const columnsSvg = function (swuText, options) {
   if (typeof options !== 'object') options = {};
-  let values = columns(swuText, options);
+  let values = swu.columns(swuText, options);
   let cols = values.columns.map( (col,i) => {
     return columnSvg(col,{...values.options,...{width:values.widths[i]}});
   })

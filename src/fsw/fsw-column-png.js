@@ -1,12 +1,11 @@
 
-import { parse as parseStyle, compose as composeStyle} from '@sutton-signwriting/core/style/style.mjs'; 
-import { columnDefaults } from '@sutton-signwriting/core/fsw/fsw.mjs';
-import { parse, colorize } from '@sutton-signwriting/core/fsw/fsw.mjs';
+import { fsw, style } from '@sutton-signwriting/core'; 
+
 import { symbolLine, symbolFill } from './fsw-symbol-text';
 
 const columnCanvas = function (fswColumn, options) {
   if (typeof options !== 'object') options = {};
-  const values = Object.assign(columnDefaults,options);
+  const values = Object.assign(fsw.columnDefaults,options);
 
   const canvas = document.createElement('canvas');
   canvas.width = values.width;
@@ -25,23 +24,23 @@ const columnCanvas = function (fswColumn, options) {
       const itemStyle = item.text.substring(dash);
       const newStyle = {
         ...values.style,
-        ...parseStyle(itemStyle)
+        ...style.parse(itemStyle)
       };
-      item.text = item.text.replace(itemStyle,composeStyle(newStyle));
+      item.text = item.text.replace(itemStyle,style.compose(newStyle));
     } else {
-      item.text += composeStyle(values.style);
+      item.text += style.compose(values.style);
     }
     item.zoom = item.zoom * values.style.zoom;
 
     let parsed = {};
     if (item.segment=="sign") {
-      parsed = parse.sign(item.text);
+      parsed = fsw.parse.sign(item.text);
     } else {
-      let sym = parse.symbol(item.text);
+      let sym = fsw.parse.symbol(item.text);
       parsed.style = sym.style;
       parsed.spatials = [sym];
     }
-    let styling = parseStyle(parsed.style);
+    let styling = style.parse(parsed.style);
 
     if (styling.background) {
       context.fillStyle=styling.background;
@@ -64,7 +63,7 @@ const columnCanvas = function (fswColumn, options) {
       if (spatial.detail) {
         symLine = spatial.detail[0];
       } else if (styling.colorize) {
-        symLine = colorize(spatial.symbol);
+        symLine = fsw.colorize(spatial.symbol);
       }
 
       let symFill = fill;

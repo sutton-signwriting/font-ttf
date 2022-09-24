@@ -44,3 +44,7 @@ toc:
   - swu.columnsSvg
   - swu.columnPng
   - swu.columnsPng
+  - ColumnOptions
+  - ColumnData
+  - ColumnSegment
+  - StyleObject

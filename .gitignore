@@ -5,3 +5,4 @@ yarn.lock
 /font
 /fsw
 /swu
+*.d.ts

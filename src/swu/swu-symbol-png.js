@@ -1,21 +1,20 @@
 
-import { parse as parseStyle} from '@sutton-signwriting/core/style/style.mjs'; 
-import { parse, colorize } from '@sutton-signwriting/core/swu/swu.mjs';
+import { swu, style } from '@sutton-signwriting/core';
 import { symbolSize } from './swu-symbol-size';
 import { symbolLine, symbolFill } from './swu-symbol-text';
 
 const symbolCanvas = function(swuSym){
-  const parsed = parse.symbol(swuSym);
+  const parsed = swu.parse.symbol(swuSym);
 
   if (parsed.symbol) {
     let size = symbolSize(parsed.symbol);
     if (size) {
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
-      let styling = parseStyle(parsed.style);
+      let styling = style.parse(parsed.style);
       let line = 'black';
       if (styling.colorize) {
-        line = colorize(parsed.symbol);
+        line = swu.colorize(parsed.symbol);
       } else if (styling.detail) {
         line = styling.detail[0]
       }
@@ -62,6 +61,7 @@ const symbolCanvas = function(swuSym){
  * Function that creates a PNG data url from an SWU symbol character with an optional style string
  * @function swu.symbolPng
  * @param {string} swuSym - an SWU symbol character with optional style string
+ * @returns {string} png image for symbol as data url
  * @example
  * swu.symbolPng('񀀁-CP10G_green_Z2')
  * 

@@ -1,6 +1,5 @@
 
-import { parse as parseStyle} from '@sutton-signwriting/core/style/style.mjs'; 
-import { parse, colorize } from '@sutton-signwriting/core/fsw/fsw.mjs';
+import { fsw, style } from '@sutton-signwriting/core';
 import { symbolSize } from './fsw-symbol-size';
 import { symbolText } from './fsw-symbol-text';
 
@@ -8,6 +7,7 @@ import { symbolText } from './fsw-symbol-text';
  * Function that creates an SVG image from an FSW symbol key with an optional style string
  * @function fsw.symbolSvgBody
  * @param {string} fswSym - an FSW symbol key with optional style string
+ * @returns {string} body of SVG for symbol
  * @example
  * fsw.symbolSvgBody('S10000')
  * 
@@ -18,10 +18,10 @@ import { symbolText } from './fsw-symbol-text';
  *   </g>`
  */
  const symbolSvgBody = (fswSym) => {
-  const parsed = parse.symbol(fswSym);
+  const parsed = fsw.parse.symbol(fswSym);
   const blank = '';
   if (!parsed.symbol) return blank;
-  let styling = parseStyle(parsed.style);
+  let styling = style.parse(parsed.style);
 
   let x1, y1, x2, y2;
   if (parsed.coord) {
@@ -45,7 +45,7 @@ ${symSvg}
 
   let line;
   if (styling.colorize) {
-    line = colorize(parsed.symbol);
+    line = fsw.colorize(parsed.symbol);
   } else if (styling.detail) {
     line = styling.detail[0]
   }
@@ -77,6 +77,7 @@ ${symSvg}`;
  * Function that creates an SVG image from an FSW symbol key with an optional style string
  * @function fsw.symbolSvg
  * @param {string} fswSym - an FSW symbol key with optional style string
+ * @returns {string} SVG for symbol
  * @example
  * fsw.symbolSvg('S10000')
  * 
@@ -89,10 +90,10 @@ ${symSvg}`;
  * </svg>`
  */
  const symbolSvg = (fswSym) => {
-  const parsed = parse.symbol(fswSym);
+  const parsed = fsw.parse.symbol(fswSym);
   const blank = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1" height="1"></svg>';
   if (!parsed.symbol) return blank;
-  let styling = parseStyle(parsed.style);
+  let styling = style.parse(parsed.style);
 
   let x1, y1, x2, y2;
   if (parsed.coord) {

@@ -1,6 +1,5 @@
 
-import { parse as parseStyle} from '@sutton-signwriting/core/style/style.mjs'; 
-import { parse, colorize } from '@sutton-signwriting/core/swu/swu.mjs';
+import { swu, style } from '@sutton-signwriting/core';
 import { symbolSize } from './swu-symbol-size';
 import { symbolText } from './swu-symbol-text';
 
@@ -8,6 +7,7 @@ import { symbolText } from './swu-symbol-text';
  * Function that creates an SVG image from an SWU symbol key with an optional style string
  * @function swu.symbolSvgBody
  * @param {string} swuSym - an SWU symbol key with optional style string
+ * @returns {string} body of SVG for symbol
  * @example
  * swu.symbolSvgBody('S10000')
  * 
@@ -18,10 +18,10 @@ import { symbolText } from './swu-symbol-text';
  *   </g>`
  */
  const symbolSvgBody = (swuSym) => {
-  const parsed = parse.symbol(swuSym);
+  const parsed =  swu.parse.symbol(swuSym);
   const blank = '';
   if (!parsed.symbol) return blank;
-  let styling = parseStyle(parsed.style);
+  let styling = style.parse(parsed.style);
 
   let x1, y1, x2, y2;
   if (parsed.coord) {
@@ -45,7 +45,7 @@ ${symSvg}
 
   let line;
   if (styling.colorize) {
-    line = colorize(parsed.symbol);
+    line = swu.colorize(parsed.symbol);
   } else if (styling.detail) {
     line = styling.detail[0]
   }
@@ -77,6 +77,7 @@ ${symSvg}`;
  * Function that creates an SVG image from an SWU symbol key with an optional style string
  * @function swu.symbolSvg
  * @param {string} swuSym - an SWU symbol key with optional style string
+ * @returns {string} SVG for symbol
  * @example
  * swu.symbolSvg('S10000')
  * 
@@ -89,10 +90,10 @@ ${symSvg}`;
  * </svg>`
  */
  const symbolSvg = (swuSym) => {
-  const parsed = parse.symbol(swuSym);
+  const parsed =  swu.parse.symbol(swuSym);
   const blank = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1" height="1"></svg>';
   if (!parsed.symbol) return blank;
-  let styling = parseStyle(parsed.style);
+  let styling = style.parse(parsed.style);
 
   let x1, y1, x2, y2;
   if (parsed.coord) {

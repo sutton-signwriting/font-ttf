@@ -1,21 +1,20 @@
 
-import { parse as parseStyle} from '@sutton-signwriting/core/style/style.mjs'; 
-import { parse, colorize } from '@sutton-signwriting/core/fsw/fsw.mjs';
+import { fsw, style } from '@sutton-signwriting/core';
 import { symbolSize } from './fsw-symbol-size';
 import { symbolLine, symbolFill } from './fsw-symbol-text';
 
 const symbolCanvas = function(fswSym){
-  const parsed = parse.symbol(fswSym);
+  const parsed = fsw.parse.symbol(fswSym);
 
   if (parsed.symbol) {
     let size = symbolSize(parsed.symbol);
     if (size) {
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
-      let styling = parseStyle(parsed.style);
+      let styling = style.parse(parsed.style);
       let line = 'black';
       if (styling.colorize) {
-        line = colorize(parsed.symbol);
+        line = fsw.colorize(parsed.symbol);
       } else if (styling.detail) {
         line = styling.detail[0]
       }
@@ -62,6 +61,7 @@ const symbolCanvas = function(fswSym){
  * Function that creates a PNG data url from an FSW symbol key with an optional style string
  * @function fsw.symbolPng
  * @param {string} fswSym - an FSW symbol key with optional style string
+ * @returns {string} png image for symbol as data url
  * @example
  * fsw.symbolPng('S10000')
  * 

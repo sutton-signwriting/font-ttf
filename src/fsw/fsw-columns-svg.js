@@ -1,5 +1,5 @@
 
-import { columns } from '@sutton-signwriting/core/fsw/fsw.mjs';
+import { fsw } from '@sutton-signwriting/core';
 import { columnSvg } from './fsw-column-svg';
 
 /**
@@ -56,7 +56,7 @@ import { columnSvg } from './fsw-column-svg';
  */
 const columnsSvg = function (fswText, options) {
   if (typeof options !== 'object') options = {};
-  let values = columns(fswText, options);
+  let values = fsw.columns(fswText, options);
   let cols = values.columns.map( (col,i) => {
     return columnSvg(col,{...values.options,...{width:values.widths[i]}});
   })

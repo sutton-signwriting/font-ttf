@@ -3,6 +3,7 @@
  * Function that returns a plane 15 character for a symbol line using an id
  * @function font.symbolLine
  * @param {number} id - a 16-bit number of a symbol
+ * @returns {string} character for symbol line
  * @example
  * font.symbolLine(1)
  * 
@@ -16,6 +17,7 @@ const symbolLine = function (id){
  * Function that returns a plane 16 character for a symbol fill using an id
  * @function font.symbolFill
  * @param {number} id - a 16-bit number of a symbol
+ * @returns {string} character for symbol fill
  * @example
  * font.symbolFill(1)
  * 
@@ -29,6 +31,7 @@ const symbolFill = function (id){
  * Function that creates two text elements for a symbol using an id
  * @function font.symbolText
  * @param {number} id - a 16-bit number of a symbol
+ * @returns {string} SVG segment for line and fill
  * @example
  * font.symbolText(1)
  * 
