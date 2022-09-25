@@ -1,5 +1,6 @@
 
-import { fsw, style } from '@sutton-signwriting/core';
+import { parse as parseStyle} from '@sutton-signwriting/core/style/style'; 
+import { parse, colorize } from '@sutton-signwriting/core/fsw/fsw';
 import { symbolSize } from './fsw-symbol-size';
 import { symbolText } from './fsw-symbol-text';
 
@@ -18,10 +19,10 @@ import { symbolText } from './fsw-symbol-text';
  *   </g>`
  */
  const symbolSvgBody = (fswSym) => {
-  const parsed = fsw.parse.symbol(fswSym);
+  const parsed = parse.symbol(fswSym);
   const blank = '';
   if (!parsed.symbol) return blank;
-  let styling = style.parse(parsed.style);
+  let styling = parseStyle(parsed.style);
 
   let x1, y1, x2, y2;
   if (parsed.coord) {
@@ -45,7 +46,7 @@ ${symSvg}
 
   let line;
   if (styling.colorize) {
-    line = fsw.colorize(parsed.symbol);
+    line = colorize(parsed.symbol);
   } else if (styling.detail) {
     line = styling.detail[0]
   }
@@ -90,10 +91,10 @@ ${symSvg}`;
  * </svg>`
  */
  const symbolSvg = (fswSym) => {
-  const parsed = fsw.parse.symbol(fswSym);
+  const parsed = parse.symbol(fswSym);
   const blank = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1" height="1"></svg>';
   if (!parsed.symbol) return blank;
-  let styling = style.parse(parsed.style);
+  let styling = parseStyle(parsed.style);
 
   let x1, y1, x2, y2;
   if (parsed.coord) {

@@ -1,20 +1,21 @@
 
-import { fsw, style } from '@sutton-signwriting/core';
+import { parse as parseStyle} from '@sutton-signwriting/core/style/style'; 
+import { parse, colorize } from '@sutton-signwriting/core/fsw/fsw';
 import { symbolSize } from './fsw-symbol-size';
 import { symbolLine, symbolFill } from './fsw-symbol-text';
 
 const symbolCanvas = function(fswSym){
-  const parsed = fsw.parse.symbol(fswSym);
+  const parsed = parse.symbol(fswSym);
 
   if (parsed.symbol) {
     let size = symbolSize(parsed.symbol);
     if (size) {
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
-      let styling = style.parse(parsed.style);
+      let styling = parseStyle(parsed.style);
       let line = 'black';
       if (styling.colorize) {
-        line = fsw.colorize(parsed.symbol);
+        line = colorize(parsed.symbol);
       } else if (styling.detail) {
         line = styling.detail[0]
       }

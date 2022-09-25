@@ -1,15 +1,16 @@
 
-import { swu, style } from '@sutton-signwriting/core'; 
+import { parse as parseStyle} from '@sutton-signwriting/core/style/style'; 
+import { parse, colorize } from '@sutton-signwriting/core/swu/swu';
 import { symbolLine, symbolFill } from './swu-symbol-text';
 
 const signCanvas = function (swuSign) {
-  const parsed = swu.parse.sign(swuSign);
+  const parsed = parse.sign(swuSign);
 
   if (parsed.spatials) {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
 
-    let styling = style.parse(parsed.style);
+    let styling = parseStyle(parsed.style);
 
     if (styling.detailsym) {
       styling.detailsym.forEach(sym => {
@@ -56,7 +57,7 @@ const signCanvas = function (swuSign) {
       if (spatial.detail) {
         symLine = spatial.detail[0];
       } else if (styling.colorize) {
-        symLine = swu.colorize(spatial.symbol);
+        symLine = colorize(spatial.symbol);
       }
 
       let symFill = fill;

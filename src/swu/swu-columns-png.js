@@ -1,5 +1,5 @@
 
-import { swu } from '@sutton-signwriting/core';
+import { columns } from '@sutton-signwriting/core/swu/swu';
 import { columnPng } from './swu-column-png';
 
 /**
@@ -18,7 +18,7 @@ import { columnPng } from './swu-column-png';
  */
 const columnsPng = function (swuText, options) {
   if (typeof options !== 'object') options = {};
-  let values = swu.columns(swuText, options);
+  let values = columns(swuText, options);
   let cols = values.columns.map( (col,i) => {
     return columnPng(col,{...values.options,...{width:values.widths[i]}});
   })

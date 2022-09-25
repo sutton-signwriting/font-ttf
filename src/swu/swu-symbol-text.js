@@ -1,5 +1,5 @@
 
-import { convert } from '@sutton-signwriting/core';
+import { swu2id } from '@sutton-signwriting/core/convert/convert'; 
 import { symbolLine as symLine, symbolFill as symFill, symbolText as symText } from '../font/font-symbol-text';
 
 /**
@@ -13,7 +13,7 @@ import { symbolLine as symLine, symbolFill as symFill, symbolText as symText } f
  * return '󰀁'
  */
 const symbolLine = function(swu){
-  return symLine(convert.swu2id(swu));
+  return symLine(swu2id(swu));
 }
 
 /**
@@ -27,7 +27,7 @@ const symbolLine = function(swu){
  * return '􀀁'
  */
 const symbolFill = function(swu){
-  return symFill(convert.swu2id(swu));
+  return symFill(swu2id(swu));
 }
 
 /**
@@ -42,6 +42,6 @@ const symbolFill = function(swu){
  *     <text class="sym-line" fill="black" style="pointer-events:none;font-family:'SuttonSignWritingLine';font-size:30px;">󰀁</text>`
  */
 const symbolText = function(swu){
-  return symText(convert.swu2id(swu));
+  return symText(swu2id(swu));
 }
 export { symbolLine, symbolFill, symbolText }

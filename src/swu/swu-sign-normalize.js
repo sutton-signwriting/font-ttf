@@ -1,5 +1,6 @@
 
-import { swu, convert } from '@sutton-signwriting/core';
+import { parse, ranges } from '@sutton-signwriting/core/swu/swu';
+import { coord2swu } from '@sutton-signwriting/core/convert/convert';
 import { symbolSize } from './swu-symbol-size';
 
 /**
@@ -13,7 +14,7 @@ import { symbolSize } from './swu-symbol-size';
  * return '𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭'
  */
 const signNormalize = (swuSign) => {
-  const parsed = swu.parse.sign(swuSign);
+  const parsed = parse.sign(swuSign);
   if (parsed.spatials) {
     const symbolsizes = parsed.spatials.reduce((output, spatial) => {
       const size = symbolSize(spatial.symbol);
@@ -37,13 +38,13 @@ const signNormalize = (swuSign) => {
       };
     }
 
-    const hrange = swu.ranges['hcenter'];
+    const hrange = ranges['hcenter'];
     const hsyms = parsed.spatials.filter((spatial) => {
       const dec = parseInt(spatial.symbol.slice(1, 4), 16);
       return (hrange[0] <= dec && hrange[1] >= dec);
     })
 
-    const vrange = swu.ranges['vcenter'];
+    const vrange = ranges['vcenter'];
     const vsyms = parsed.spatials.filter((spatial) => {
       const dec = parseInt(spatial.symbol.slice(1, 4), 16);
       return (vrange[0] <= dec && vrange[1] >= dec);
@@ -63,8 +64,8 @@ const signNormalize = (swuSign) => {
 
     const offset = [parseInt((abox.x2 + abox.x1) / 2) - 500, parseInt((abox.y2 + abox.y1) / 2) - 500]
     const swuout = (parsed.sequence ? '𝠀' + parsed.sequence.join('') : '') +
-      parsed.box + convert.coord2swu([(max[0] - offset[0]), (max[1] - offset[1])]) +
-      parsed.spatials.map(spatial => spatial.symbol + convert.coord2swu([(spatial.coord[0] - offset[0]), (spatial.coord[1] - offset[1])])).join('') +
+      parsed.box + coord2swu([(max[0] - offset[0]), (max[1] - offset[1])]) +
+      parsed.spatials.map(spatial => spatial.symbol + coord2swu([(spatial.coord[0] - offset[0]), (spatial.coord[1] - offset[1])])).join('') +
       (parsed.style || '');
     return swuout;
   }

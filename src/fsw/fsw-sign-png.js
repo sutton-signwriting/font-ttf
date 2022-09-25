@@ -1,15 +1,16 @@
 
-import { fsw, style } from '@sutton-signwriting/core';
+import { parse as parseStyle} from '@sutton-signwriting/core/style/style'; 
+import { parse, colorize } from '@sutton-signwriting/core/fsw/fsw';
 import { symbolLine, symbolFill } from './fsw-symbol-text';
 
 const signCanvas = function (fswSign) {
-  const parsed = fsw.parse.sign(fswSign);
+  const parsed = parse.sign(fswSign);
 
   if (parsed.spatials) {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
 
-    let styling = style.parse(parsed.style);
+    let styling = parseStyle(parsed.style);
 
     if (styling.detailsym) {
       styling.detailsym.forEach(sym => {
@@ -56,7 +57,7 @@ const signCanvas = function (fswSign) {
       if (spatial.detail) {
         symLine = spatial.detail[0];
       } else if (styling.colorize) {
-        symLine = fsw.colorize(spatial.symbol);
+        symLine = colorize(spatial.symbol);
       }
 
       let symFill = fill;
@@ -93,3 +94,4 @@ const signPng = (fswSign) => {
   return png;
 }
 export { signPng }
+

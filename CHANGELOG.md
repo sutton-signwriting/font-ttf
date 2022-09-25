@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2022-09-25
+### Removed
+- types and exports from package.json
+
 ## [1.4.0] - 2022-09-24
 ### Added
 - TypeScript definitions

@@ -1,5 +1,5 @@
 
-import { convert } from '@sutton-signwriting/core'; 
+import { key2id } from '@sutton-signwriting/core/convert/convert'; 
 import { symbolSize as symSize } from '../font/font-symbol-size';
 
 /**
@@ -13,7 +13,7 @@ import { symbolSize as symSize } from '../font/font-symbol-size';
  * return [15,30]
  */
 const symbolSize = function (fsw){
-  return symSize(convert.key2id(fsw));
+  return symSize(key2id(fsw));
 }
 
 export { symbolSize }

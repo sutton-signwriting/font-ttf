@@ -1,5 +1,5 @@
 
-import { fsw } from '@sutton-signwriting/core';
+import { parse, ranges } from '@sutton-signwriting/core/fsw/fsw';
 import { symbolSize } from './fsw-symbol-size';
 
 /**
@@ -13,7 +13,7 @@ import { symbolSize } from './fsw-symbol-size';
  * return 'M525x535S2e748483x510S10011501x466S2e704510x500S10019476x475'
  */
 const signNormalize = (fswSign) => {
-  const parsed = fsw.parse.sign(fswSign);
+  const parsed = parse.sign(fswSign);
   if (parsed.spatials) {
     const symbolsizes = parsed.spatials.reduce((output, spatial) => {
       const size = symbolSize(spatial.symbol);
@@ -37,13 +37,13 @@ const signNormalize = (fswSign) => {
       };
     }
 
-    const hrange = fsw.ranges['hcenter'];
+    const hrange = ranges['hcenter'];
     const hsyms = parsed.spatials.filter((spatial) => {
       const dec = parseInt(spatial.symbol.slice(1, 4), 16);
       return (hrange[0] <= dec && hrange[1] >= dec);
     })
 
-    const vrange = fsw.ranges['vcenter'];
+    const vrange = ranges['vcenter'];
     const vsyms = parsed.spatials.filter((spatial) => {
       const dec = parseInt(spatial.symbol.slice(1, 4), 16);
       return (vrange[0] <= dec && vrange[1] >= dec);

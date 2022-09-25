@@ -1,7 +1,7 @@
 {
   "name": "@sutton-signwriting/font-ttf",
   "description": "a javascript package for the web components and browser that generates SVG and PNG images for individual symbols and complete signs",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "keywords": [
     "truetype",
     "ttf",
@@ -37,11 +37,6 @@
   ],
   "main": "index.min.js",
   "module": "index.min.mjs",
-  "exports": {
-    "import": "./index.min.mjs",
-    "default": "./index.min.js"
-  },
-  "types": "./index.d.ts",
   "scripts": {
     "prebuild": "rimraf index.* font fsw swu; copyfiles --flat src/font/*ttf font",
     "build": "rollup -c",
@@ -51,7 +46,7 @@
     "docs:server": "npx documentation serve --watch src/index.js --config documentation.yml"
   },
   "dependencies": {
-    "@sutton-signwriting/core": "^1.5.1"
+    "@sutton-signwriting/core": "^1.5.3"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

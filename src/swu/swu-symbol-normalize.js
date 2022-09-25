@@ -1,5 +1,6 @@
 
-import { swu, convert } from '@sutton-signwriting/core';
+import { parse } from '@sutton-signwriting/core/swu/swu';
+import { coord2swu } from '@sutton-signwriting/core/convert/convert';
 import { symbolSize } from './swu-symbol-size';
 
 const blank = null;
@@ -15,11 +16,11 @@ const blank = null;
  * return '񀀁𝣿𝣷'
  */
 const symbolNormalize = (swuSym) => {
-  const parsed = swu.parse.symbol(swuSym);
+  const parsed = parse.symbol(swuSym);
   if (parsed.symbol) {
     let size = symbolSize(parsed.symbol);
     if (size) {
-      return `${parsed.symbol}${convert.coord2swu([(500 - parseInt((size[0]+1) / 2)),(500 - parseInt((size[1]+1) / 2))])}${parsed.style || ''}`;
+      return `${parsed.symbol}${coord2swu([(500 - parseInt((size[0]+1) / 2)),(500 - parseInt((size[1]+1) / 2))])}${parsed.style || ''}`;
     }
   } else {
     return blank;

@@ -1,11 +1,11 @@
 
-import { fsw, style } from '@sutton-signwriting/core'; 
-
+import { parse as parseStyle, compose as composeStyle} from '@sutton-signwriting/core/style/style'; 
+import { columnDefaults, parse, colorize } from '@sutton-signwriting/core/fsw/fsw';
 import { symbolLine, symbolFill } from './fsw-symbol-text';
 
 const columnCanvas = function (fswColumn, options) {
   if (typeof options !== 'object') options = {};
-  const values = Object.assign(fsw.columnDefaults,options);
+  const values = Object.assign(columnDefaults,options);
 
   const canvas = document.createElement('canvas');
   canvas.width = values.width;
@@ -24,23 +24,23 @@ const columnCanvas = function (fswColumn, options) {
       const itemStyle = item.text.substring(dash);
       const newStyle = {
         ...values.style,
-        ...style.parse(itemStyle)
+        ...parseStyle(itemStyle)
       };
-      item.text = item.text.replace(itemStyle,style.compose(newStyle));
+      item.text = item.text.replace(itemStyle,composeStyle(newStyle));
     } else {
-      item.text += style.compose(values.style);
+      item.text += composeStyle(values.style);
     }
     item.zoom = item.zoom * values.style.zoom;
 
     let parsed = {};
     if (item.segment=="sign") {
-      parsed = fsw.parse.sign(item.text);
+      parsed = parse.sign(item.text);
     } else {
-      let sym = fsw.parse.symbol(item.text);
+      let sym = parse.symbol(item.text);
       parsed.style = sym.style;
       parsed.spatials = [sym];
     }
-    let styling = style.parse(parsed.style);
+    let styling = parseStyle(parsed.style);
 
     if (styling.background) {
       context.fillStyle=styling.background;
@@ -63,7 +63,7 @@ const columnCanvas = function (fswColumn, options) {
       if (spatial.detail) {
         symLine = spatial.detail[0];
       } else if (styling.colorize) {
-        symLine = fsw.colorize(spatial.symbol);
+        symLine = colorize(spatial.symbol);
       }
 
       let symFill = fill;

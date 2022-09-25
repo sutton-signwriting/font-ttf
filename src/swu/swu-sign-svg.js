@@ -1,5 +1,6 @@
 
-import { swu, style } from '@sutton-signwriting/core';
+import { parse as parseStyle} from '@sutton-signwriting/core/style/style'; 
+import { parse, colorize } from '@sutton-signwriting/core/swu/swu';
 import { symbolText } from './swu-symbol-text';
 
 /**
@@ -29,10 +30,10 @@ import { symbolText } from './swu-symbol-text';
  *   </g>`
  */
 const signSvgBody = (swuSign) => {
-  let parsed = swu.parse.sign(swuSign);
+  let parsed = parse.sign(swuSign);
   const blank = '';
   if (parsed.spatials) {
-    let styling = style.parse(parsed.style);
+    let styling = parseStyle(parsed.style);
 
     if (styling.detailsym) {
       styling.detailsym.forEach(sym => {
@@ -70,7 +71,7 @@ const signSvgBody = (swuSign) => {
       if (spatial.detail) {
         symLine = spatial.detail[0];
       } else if (styling.colorize) {
-        symLine = swu.colorize(spatial.symbol);
+        symLine = colorize(spatial.symbol);
       }
       if (symLine) {
         svg = svg.replace(/class="sym-line" fill="black"/, `class="sym-line" fill="${symLine}"`);
@@ -124,10 +125,10 @@ ${svg}
  * </svg>`
  */
  const signSvg = (swuSign) => {
-  let parsed = swu.parse.sign(swuSign);
+  let parsed = parse.sign(swuSign);
   const blank = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1" height="1"></svg>';
   if (parsed.spatials) {
-    let styling = style.parse(parsed.style);
+    let styling = parseStyle(parsed.style);
 
     let x1 = Math.min(...parsed.spatials.map(spatial => spatial.coord[0]));
     let y1 = Math.min(...parsed.spatials.map(spatial => spatial.coord[1]));

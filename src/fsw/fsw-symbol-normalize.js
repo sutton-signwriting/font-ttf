@@ -1,5 +1,5 @@
 
-import { fsw } from '@sutton-signwriting/core';
+import { parse } from '@sutton-signwriting/core/fsw/fsw';
 import { symbolSize } from './fsw-symbol-size';
 
 const blank = null;
@@ -15,7 +15,7 @@ const blank = null;
  * return 'S10000493x485-CP10G_green_Z2'
  */
 const symbolNormalize = (fswSym) => {
-  const parsed = fsw.parse.symbol(fswSym);
+  const parsed = parse.symbol(fswSym);
   if (parsed.symbol) {
     let size = symbolSize(parsed.symbol);
     if (size) {
