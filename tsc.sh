@@ -1,3 +1,4 @@
+cp node_modules/@sutton-signwriting/core/src/types.js src/types.js
 tsc src/types.js --declaration --emitDeclarationOnly --allowJs
 
 tsc index.js src/types.js --declaration --emitDeclarationOnly --allowJs

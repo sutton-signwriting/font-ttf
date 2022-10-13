@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Todo
+- ...
+
+## [1.4.2] - 2022-10-13
+### Changed
+- types to @sutton-signwritng/core types with optional properties
 
 ## [1.4.1] - 2022-09-25
 ### Removed
@@ -61,7 +67,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - documentation for core modules
 
 
-[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.4.2...HEAD
+[1.4.2]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.2
+[1.4.1]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.1
 [1.4.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.0
 [1.3.2]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.3.2
 [1.3.1]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.3.1

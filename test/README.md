@@ -5,4 +5,6 @@
     npx serve .
 
 ## Open a web browser in the test directory
-    http://localhost:3000/test
+NOTE: the trailing / is required when using serve
+
+    http://localhost:3000/test/
