@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Todo
 - ...
 
+## [1.4.3] - 2022-11-07
+### Changed
+- donate link
+
 ## [1.4.2] - 2022-10-13
 ### Changed
 - types to @sutton-signwritng/core types with optional properties

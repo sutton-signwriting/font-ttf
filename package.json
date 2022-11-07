@@ -1,7 +1,7 @@
 {
   "name": "@sutton-signwriting/font-ttf",
   "description": "a javascript package for the web components and browser that generates SVG and PNG images for individual symbols and complete signs",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "keywords": [
     "truetype",
     "ttf",
@@ -46,7 +46,7 @@
     "docs:server": "npx documentation serve --watch src/index.js --config documentation.yml"
   },
   "dependencies": {
-    "@sutton-signwriting/core": "^1.5.4"
+    "@sutton-signwriting/core": "^1.5.5"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

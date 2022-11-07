@@ -12,7 +12,7 @@ This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in 
 > Author: https://SteveSlevinski.me  
 > Channel: https://www.youtube.com/channel/UCXu4AXlG0rXFtk_5SzumDow  
 > Sponsor: https://www.patreon.com/signwriting  
-> Donate: https://paypal.me/signwriting
+> Donate: https://donate.sutton-signwriting.io
 
 ## Useful links
 
@@ -41,6 +41,7 @@ The TrueType Fonts can be installed on Windows, Mac, and Linux.  For iOS, [two m
     # install dependencies
     cd font-ttf
     npm install
+    sudo apt install node-typescript
 
     # create project documentation
     npm run docs
@@ -77,11 +78,11 @@ The TrueType Fonts can be installed on Windows, Mac, and Linux.  For iOS, [two m
 ```
     // import entire library
     // available as ssw.ttf
-    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.4.2"></script>
+    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.4.3"></script>
 
     // import individual module
     // available as ssw.ttf.font
-    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.4.2/font/font.min.js"></script>
+    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.4.3/font/font.min.js"></script>
 ```
 
 ## Configure font for VS Code
