@@ -78,11 +78,11 @@ The TrueType Fonts can be installed on Windows, Mac, and Linux.  For iOS, [two m
 ```
     // import entire library
     // available as ssw.ttf
-    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.4.3"></script>
+    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.4.4"></script>
 
     // import individual module
     // available as ssw.ttf.font
-    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.4.3/font/font.min.js"></script>
+    <script src="https://unpkg.com/@sutton-signwriting/font-ttf@1.4.4/font/font.min.js"></script>
 ```
 
 ## Configure font for VS Code
