@@ -5,7 +5,13 @@
 * update Changelog with version details
 * update Readme version number in links
 
+## Build and Document
+    npm run build
+    npm run docs
+
 ## Commit and tag
+    git status
+    git add <files>
     git commit -m "version details"
     git push origin master
     git tag -am "version details" v1.4.4

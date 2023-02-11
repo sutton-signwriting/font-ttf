@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Todo
 - ...
 
+## [1.4.5] - 2023-02-11
+### Fixed
+- frequent canvas read warning
+
 ## [1.4.4] - 2023-01-09
 ### Fixed
 - security issue
@@ -75,7 +79,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - documentation for core modules
 
 
-[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.4.4...HEAD
+[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.4.5...HEAD
+[1.4.5]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.5
 [1.4.4]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.4
 [1.4.3]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.3
 [1.4.2]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.2
