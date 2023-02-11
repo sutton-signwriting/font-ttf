@@ -23,7 +23,7 @@ const symbolSize = function(id){
     const canvaser = document.createElement("canvas");
     canvaser.width = bound;
     canvaser.height = bound;
-    context = canvaser.getContext("2d"); 
+    context = canvaser.getContext("2d", {willReadFrequently: true}); 
   }
   context.clearRect(0, 0, bound, bound);
   context.font = (30*zoom) + "px 'SuttonSignWritingLine'";
