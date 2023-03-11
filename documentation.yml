@@ -19,6 +19,10 @@ toc:
   - fsw.symbolSvg
   - fsw.symbolPng
   - fsw.symbolNormalize
+  - fsw.symbolMirror
+  - fsw.symbolRotate
+  - fsw.symbolFlop
+  - fsw.symbolScroll
   - fsw.signSvgBody
   - fsw.signSvg
   - fsw.signPng
@@ -36,6 +40,10 @@ toc:
   - swu.symbolSvg
   - swu.symbolPng
   - swu.symbolNormalize
+  - swu.symbolMirror
+  - swu.symbolRotate
+  - swu.symbolFlop
+  - swu.symbolScroll
   - swu.signSvgBody
   - swu.signSvg
   - swu.signPng

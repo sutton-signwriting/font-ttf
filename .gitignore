@@ -6,3 +6,4 @@ yarn.lock
 /fsw
 /swu
 *.d.ts
+/src/types.js

@@ -38,6 +38,41 @@ suite('fsw', function(){
       assert.equal(ssw.ttf.fsw.symbolNormalize('S10000-CP10G_green_Z2'),'S10000492x485-CP10G_green_Z2');
     });
   })
+  suite('symbolMirror', function(){
+    test('S10000', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S10000'),'S10008');
+    });
+    test('S10008', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S10008'),'S10000');
+    });
+  })
+  suite('symbolRotate', function(){
+    test('S10000', function(){
+      assert.equal(ssw.ttf.fsw.symbolRotate('S10000'),'S10007');
+    });
+    test('S10000 counter clockwise', function(){
+      assert.equal(ssw.ttf.fsw.symbolRotate('S10000',false),'S10001');
+    });
+  })
+  suite('symbolFlop', function(){
+    test('S10000', function(){
+      assert.equal(ssw.ttf.fsw.symbolFlop('S10000'),'S10010');
+    });
+    test('S10000 minus', function(){
+      assert.equal(ssw.ttf.fsw.symbolFlop('S10000',false),'S10050');
+    });
+  })
+  suite('symbolScroll', function(){
+    test('S10000', function(){
+      assert.equal(ssw.ttf.fsw.symbolScroll('S10000'),'S10100');
+    });
+    test('S10000 minus', function(){
+      assert.equal(ssw.ttf.fsw.symbolScroll('S10000',false),'S10000');
+    });
+    test('S10100 minus', function(){
+      assert.equal(ssw.ttf.fsw.symbolScroll('S10100',false),'S10000');
+    });
+  })
   suite('signSvg', function(){
     test('Sign with style', function(){
       assert.equal(ssw.ttf.fsw.signSvg('AS10011S10019S2e704S2e748M525x535S2e748483x510S10011501x466S2e704510x500S10019476x475-P10G_green_D_yellow,ff0ff0_Z2'),`<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="138" height="178" viewBox="466 456 69 89">
@@ -105,6 +140,41 @@ suite('swu', function(){
   suite('symbolNormalize', function(){
     test('񀀁-CP10G_green_Z2', function(){
       assert.equal(ssw.ttf.swu.symbolNormalize('񀀁-CP10G_green_Z2'),'񀀁𝣾𝣷-CP10G_green_Z2');
+    });
+  })
+  suite('symbolMirror', function(){
+    test('񀀁', function(){
+      assert.equal(ssw.ttf.swu.symbolMirror('񀀁'),'񀀉');
+    });
+    test('񀀉', function(){
+      assert.equal(ssw.ttf.swu.symbolMirror('񀀉'),'񀀁');
+    });
+  })
+  suite('symbolRotate', function(){
+    test('񀀁', function(){
+      assert.equal(ssw.ttf.swu.symbolRotate('񀀁'),'񀀈');
+    });
+    test('񀀁 counter clockwise', function(){
+      assert.equal(ssw.ttf.swu.symbolRotate('񀀁',false),'񀀂');
+    });
+  })
+  suite('symbolFlop', function(){
+    test('񀀁', function(){
+      assert.equal(ssw.ttf.swu.symbolFlop('񀀁'),'񀀑');
+    });
+    test('񀀁 minus', function(){
+      assert.equal(ssw.ttf.swu.symbolFlop('񀀁',false),'񀁑');
+    });
+  })
+  suite('symbolScroll', function(){
+    test('񀀁', function(){
+      assert.equal(ssw.ttf.swu.symbolScroll('񀀁'),'񀁡');
+    });
+    test('񀀁 minus', function(){
+      assert.equal(ssw.ttf.swu.symbolScroll('񀀁',false),'񀀁');
+    });
+    test('񀁡 minus', function(){
+      assert.equal(ssw.ttf.swu.symbolScroll('񀁡',false),'񀀁');
     });
   })
   suite('signSvg', function(){
