@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Todo
 - ...
 
+## [1.5.1] - 2023-10-01
+### fixed
+- security issue
+
 ## [1.5.0] - 2023-03-11
 ### Added
 - symbol transformations: mirror, rotate, flop, and scroll
@@ -89,7 +93,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - documentation for core modules
 
 
-[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/sutton-signwriting/font-ttf/compare/v1.5.1...HEAD
+[1.5.1]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.5.1
 [1.5.0]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.5.0
 [1.4.5]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.5
 [1.4.4]: https://github.com/sutton-signwriting/font-ttf/releases/tag/v1.4.4
