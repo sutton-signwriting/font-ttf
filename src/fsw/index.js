@@ -10,6 +10,7 @@ import { symbolSvgBody, symbolSvg } from  './fsw-symbol-svg';
 import { symbolPng } from './fsw-symbol-png';
 import { symbolNormalize } from './fsw-symbol-normalize';
 import { symbolMirror } from './fsw-symbol-mirror';
+import { symbolInvert } from './fsw-symbol-invert';
 import { symbolRotate } from './fsw-symbol-rotate';
 import { symbolFlop } from './fsw-symbol-flop';
 import { symbolScroll } from './fsw-symbol-scroll';
@@ -21,4 +22,4 @@ import { columnsSvg } from './fsw-columns-svg';
 import { columnPng } from './fsw-column-png';
 import { columnsPng } from './fsw-columns-png';
 
-export { symbolSize, symbolLine, symbolFill, symbolText, symbolSvgBody, symbolSvg, symbolPng, symbolNormalize, symbolMirror, symbolRotate, symbolFlop, symbolScroll, signSvgBody, signSvg, signPng, signNormalize, columnSvg, columnsSvg, columnPng, columnsPng }
+export { symbolSize, symbolLine, symbolFill, symbolText, symbolSvgBody, symbolSvg, symbolPng, symbolNormalize, symbolMirror, symbolInvert, symbolRotate, symbolFlop, symbolScroll, signSvgBody, signSvg, signPng, signNormalize, columnSvg, columnsSvg, columnPng, columnsPng }

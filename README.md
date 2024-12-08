@@ -5,7 +5,7 @@
 
 ![SignWriting](./signwriting.png)
 
-@sutton-signwriting/font-ttf is a javascript package for the browser that generates SVG and PNG images for individual symbols and complete signs using TrueType Fonts.  The package covers the entire set of the International SignWritnig Alphabet 2010 (ISWA 2010).
+@sutton-signwriting/font-ttf is a javascript package for the browser that generates SVG and PNG images for individual symbols, complete signs, and structured text. The package covers the entire set of the International SignWritnig Alphabet 2010 (ISWA 2010) using TrueType Fonts.
 
 This package supports both Formal SignWriting in ASCII (FSW) and SignWriting in Unicode (SWU) character sets, along with the style string.  See [draft-slevinski-formal-signwriting](https://tools.ietf.org/id/draft-slevinski-formal-signwriting-09.html) for detailed specification.
 

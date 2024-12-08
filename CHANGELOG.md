@@ -8,12 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Todo
 - ...
 
+## [1.6.0] - 2024-12-08
+### Updated
+- sutton-signwriting/core to v2 to support the SignWriting null symbol
+
+### Added
+- symbol transformation "invert" which is a horizontal mirror for both FSW and SWU
+
+### Fixed
+- security issue
+
 ## [1.5.2] - 2023-10-21
-### fixed
+### Fixed
 - security issue
 
 ## [1.5.1] - 2023-10-01
-### fixed
+### Fixed
 - security issue
 
 ## [1.5.0] - 2023-03-11

@@ -20,6 +20,7 @@ toc:
   - fsw.symbolPng
   - fsw.symbolNormalize
   - fsw.symbolMirror
+  - fsw.symbolInvert
   - fsw.symbolRotate
   - fsw.symbolFlop
   - fsw.symbolScroll
@@ -41,6 +42,7 @@ toc:
   - swu.symbolPng
   - swu.symbolNormalize
   - swu.symbolMirror
+  - swu.symbolInvert
   - swu.symbolRotate
   - swu.symbolFlop
   - swu.symbolScroll

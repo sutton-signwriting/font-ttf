@@ -45,6 +45,26 @@ suite('fsw', function(){
     test('S10008', function(){
       assert.equal(ssw.ttf.fsw.symbolMirror('S10008'),'S10000');
     });
+    test('S22a01', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S22a01'),'S22a07');
+    });
+    test('S22a02', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S22a02'),'S22a06');
+    });
+  })
+  suite('symbolInvert', function(){
+    test('S10000', function(){
+      assert.equal(ssw.ttf.fsw.symbolInvert('S10000'),'S1000c');
+    });
+    test('S10008', function(){
+      assert.equal(ssw.ttf.fsw.symbolInvert('S10008'),'S10004');
+    });
+    test('S22a01', function(){
+      assert.equal(ssw.ttf.fsw.symbolInvert('S22a01'),'S22a03');
+    });
+    test('S22a02', function(){
+      assert.equal(ssw.ttf.fsw.symbolInvert('S22a02'),'S22a02');
+    });
   })
   suite('symbolRotate', function(){
     test('S10000', function(){
@@ -149,7 +169,27 @@ suite('swu', function(){
     test('񀀉', function(){
       assert.equal(ssw.ttf.swu.symbolMirror('񀀉'),'񀀁');
     });
+    test('񆿂', function(){
+      assert.equal(ssw.ttf.swu.symbolMirror('񆿂'),'񆿈');
+    });
+    test('񆿃', function(){
+      assert.equal(ssw.ttf.swu.symbolMirror('񆿃'),'񆿇');
+    });
   })
+  suite('symbolInvert', function(){
+    test('񀀁', function(){
+      assert.equal(ssw.ttf.swu.symbolInvert('񀀁'),'񀀍');
+    });
+    test('񀀉', function(){
+      assert.equal(ssw.ttf.swu.symbolInvert('񀀉'),'񀀅');
+    });
+    test('񆿂', function(){
+      assert.equal(ssw.ttf.swu.symbolInvert('񆿂'),'񆿄');
+    });
+    test('񆿃', function(){
+      assert.equal(ssw.ttf.swu.symbolInvert('񆿃'),'񆿃');
+    });
+  })  
   suite('symbolRotate', function(){
     test('񀀁', function(){
       assert.equal(ssw.ttf.swu.symbolRotate('񀀁'),'񀀈');
@@ -181,6 +221,26 @@ suite('swu', function(){
     test('Sign with style', function(){
       assert.equal(ssw.ttf.swu.signSvg('𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭-P10G_green_D_yellow,ff0ff0_Z2'),`<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="138" height="178" viewBox="466 456 69 89">
   <text font-size="0">𝠀񀀒񀀚񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭-P10G_green_D_yellow,ff0ff0_Z2</text>
+  <rect x="466" y="456" width="69" height="89" style="fill:green;" />
+  <g transform="translate(483,510)">
+    <text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;">􋛩</text>
+    <text class="sym-line" fill="yellow" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;">󻛩</text>
+  </g>
+  <g transform="translate(501,466)">
+    <text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;">􀀒</text>
+    <text class="sym-line" fill="yellow" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;">󰀒</text>
+  </g>
+  <g transform="translate(510,500)">
+    <text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;">􋚥</text>
+    <text class="sym-line" fill="yellow" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;">󻚥</text>
+  </g>
+  <g transform="translate(476,475)">
+    <text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;">􀀚</text>
+    <text class="sym-line" fill="yellow" style="pointer-events:none;font-family:\'SuttonSignWritingLine\';font-size:30px;">󰀚</text>
+  </g>
+</svg>`);
+      assert.equal(ssw.ttf.swu.signSvg('𝠀񀀒\uD8C0\uDC00񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭-P10G_green_D_yellow,ff0ff0_Z2'),`<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="138" height="178" viewBox="466 456 69 89">
+  <text font-size="0">𝠀񀀒\uD8C0\uDC00񋚥񋛩𝠃𝤟𝤩񋛩𝣵𝤐񀀒𝤇𝣤񋚥𝤐𝤆񀀚𝣮𝣭-P10G_green_D_yellow,ff0ff0_Z2</text>
   <rect x="466" y="456" width="69" height="89" style="fill:green;" />
   <g transform="translate(483,510)">
     <text class="sym-fill" fill="#ff0ff0" style="pointer-events:none;font-family:\'SuttonSignWritingFill\';font-size:30px;">􋛩</text>
