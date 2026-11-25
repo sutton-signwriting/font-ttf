@@ -100,3 +100,23 @@ MIT
 - Wikipedia page: https://en.wikipedia.org/wiki/SignWriting
 - Email Discussion: https://www.signwriting.org/forums/swlist/
 - Facebook Group: https://www.facebook.com/groups/SuttonSignWriting/
+
+## Symbol mirroring
+
+`fsw.symbolMirror` and `swu.symbolMirror` share the same reviewed rules.
+They preserve optional coordinates and styling, and throw a `RangeError`
+when the bundled font has no equivalent horizontal mirror.
+
+[`src/mirror-manifest.js`](src/mirror-manifest.js) is generated from the
+[Python SignWriting mirror rules](https://github.com/sign-language-processing/signwriting/tree/main/signwriting/utils/mirror).
+Groups share a fill XOR and a rotation rule (XOR, modular reflection, or
+a small digit map) across symbol prefixes. Overrides cover individual
+exceptions, and aliases canonicalize duplicate drawings before mirroring.
+Unlisted symbols are unchanged.
+
+To update the snapshot, run this command from the Python SignWriting
+checkout:
+
+```sh
+python -m signwriting.utils.mirror.export_manifest --javascript > /path/to/font-ttf/src/mirror-manifest.js
+```
