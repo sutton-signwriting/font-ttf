@@ -46,10 +46,21 @@ suite('fsw', function(){
       assert.equal(ssw.ttf.fsw.symbolMirror('S10008'),'S10000');
     });
     test('S22a01', function(){
-      assert.equal(ssw.ttf.fsw.symbolMirror('S22a01'),'S22a07');
+      assert.equal(ssw.ttf.fsw.symbolMirror('S22a01'),'S22a17');
     });
     test('S22a02', function(){
-      assert.equal(ssw.ttf.fsw.symbolMirror('S22a02'),'S22a06');
+      assert.equal(ssw.ttf.fsw.symbolMirror('S22a02'),'S22a16');
+    });
+    test('reflects a facial fill and keeps coordinates and styling', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S32c10490x490-Z2'), 'S32c20490x490-Z2');
+      assert.equal(ssw.ttf.fsw.symbolMirror('S32c20'), 'S32c10');
+    });
+    test('normalizes a duplicate drawing to the reviewed pair', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S2d802'), 'S2d81a');
+      assert.equal(ssw.ttf.fsw.symbolMirror('S2d81a'), 'S2d822');
+    });
+    test('throws for a glyph without an equivalent', function(){
+      assert.throws(() => ssw.ttf.fsw.symbolMirror('S22823'), RangeError, /S22823/);
     });
   })
   suite('symbolInvert', function(){
@@ -170,10 +181,17 @@ suite('swu', function(){
       assert.equal(ssw.ttf.swu.symbolMirror('񀀉'),'񀀁');
     });
     test('񆿂', function(){
-      assert.equal(ssw.ttf.swu.symbolMirror('񆿂'),'񆿈');
+      assert.equal(ssw.ttf.swu.symbolMirror('񆿂'),'񆿘');
     });
     test('񆿃', function(){
-      assert.equal(ssw.ttf.swu.symbolMirror('񆿃'),'񆿇');
+      assert.equal(ssw.ttf.swu.symbolMirror('񆿃'),'񆿗');
+    });
+    test('reflects the same facial fill as FSW', function(){
+      assert.equal(ssw.ttf.swu.symbolMirror('񍂑'), '񍂡');
+      assert.equal(ssw.ttf.swu.symbolMirror('񍂡'), '񍂑');
+    });
+    test('throws for a glyph without an equivalent', function(){
+      assert.throws(() => ssw.ttf.swu.symbolMirror('񆼤'), RangeError, /S22823/);
     });
   })
   suite('symbolInvert', function(){
