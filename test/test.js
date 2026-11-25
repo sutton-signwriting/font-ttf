@@ -51,6 +51,16 @@ suite('fsw', function(){
     test('S22a02', function(){
       assert.equal(ssw.ttf.fsw.symbolMirror('S22a02'),'S22a16');
     });
+    test('reflects a ceiling-hit rotation around its own axis', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S2ba02'), 'S2ba17');
+    });
+    test('applies a rotation digit map without moving unlisted digits', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S38451'), 'S38453');
+      assert.equal(ssw.ttf.fsw.symbolMirror('S38452'), 'S38452');
+    });
+    test('leaves an unavailable variant of a mapped family unchanged', function(){
+      assert.equal(ssw.ttf.fsw.symbolMirror('S22a08'), 'S22a08');
+    });
     test('reflects a facial fill and keeps coordinates and styling', function(){
       assert.equal(ssw.ttf.fsw.symbolMirror('S32c10490x490-Z2'), 'S32c20490x490-Z2');
       assert.equal(ssw.ttf.fsw.symbolMirror('S32c20'), 'S32c10');

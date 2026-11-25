@@ -109,8 +109,9 @@ when the bundled font has no equivalent horizontal mirror.
 
 [`src/mirror-manifest.js`](src/mirror-manifest.js) is generated from the
 [Python SignWriting mirror rules](https://github.com/sign-language-processing/signwriting/tree/main/signwriting/utils/mirror).
-Each pair is bidirectional. Aliases canonicalize duplicate drawings before
-mirroring. The hand rule shifts rotation when both font glyphs exist.
+Groups share a fill XOR and a rotation rule (XOR, modular reflection, or
+a small digit map) across symbol prefixes. Overrides cover individual
+exceptions, and aliases canonicalize duplicate drawings before mirroring.
 Unlisted symbols are unchanged.
 
 To update the snapshot, run this command from the Python SignWriting
